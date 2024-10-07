@@ -1,25 +1,49 @@
 {
-  "env": {
-    "browser": true,
-    "es2020": true,
-    "node": true
-  },
-  "extends": [
-    "plugin:react/recommended",
-    "prettier",
-    "next/core-web-vitals",
-    "next/typescript"
-  ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 11,
-    "sourceType": "module"
-  },
-  "plugins": ["react"],
-  "rules": {
-    "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off"
-  }
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": ["eslint:recommended", "next/core-web-vitals", "next/typescript", "plugin:@typescript-eslint/recommended", "plugin:react/recommended"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"project": ["./tsconfig.json", "./tsconfig.eslint.json"]
+	},
+	"plugins": ["react", "@typescript-eslint", "prettier", "import"],
+	"rules": {
+		"prettier/prettier": "error",
+		"react/prop-types": "off",
+		"react/react-in-jsx-scope": "off",
+		"@typescript-eslint/consistent-type-imports": "error",
+		"@typescript-eslint/naming-convention": "off",
+		"@typescript-eslint/no-floating-promises": "error",
+		"@typescript-eslint/no-misused-promises": "error",
+		"@typescript-eslint/no-unnecessary-condition": "warn",
+		"@typescript-eslint/no-unsafe-argument": ["warn"],
+		"@typescript-eslint/no-unsafe-assignment": ["warn"],
+		"arrow-spacing": ["warn", { "before": true, "after": true }],
+		"brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
+		"curly": ["error", "multi-line"],
+		"comma-dangle": ["warn", "never"],
+		"eqeqeq": "warn",
+		"import/namespace": "off",
+		"import/no-duplicates": "off",
+		"import/no-unresolved": [2, { "commonjs": true, "amd": false, "caseSensitive": true }],
+		"indent": ["warn", "tab", { "SwitchCase": 1 }],
+		"linebreak-style": ["off"],
+		"no-multi-spaces": ["warn"],
+		"no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+		"object-curly-spacing": ["warn", "always"],
+		"quotes": ["warn", "single"],
+		"semi": ["warn", "always"],
+		"space-before-blocks": ["warn"],
+		"space-before-function-paren": ["error", { "anonymous": "never", "named": "never", "asyncArrow": "always" }]
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
 }

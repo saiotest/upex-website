@@ -1,5 +1,5 @@
-import { TermsOfUse } from "@/components/terms-of-use"
+import { TermsOfUse } from '@/components/terms-of-use';
 
 export default function Page() {
-  return <TermsOfUse />
+	return <TermsOfUse />;
 }

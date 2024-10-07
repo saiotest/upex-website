@@ -16,6 +16,9 @@
 		"editor.formatOnSave": true,
 		"editor.formatOnPaste": true
 	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+	},
 	"[Typescript]": {
 		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
 	},
@@ -74,11 +77,8 @@
 	// =====================
 	//? ESLint Settings
 	// =====================
-	"eslint.codeAction.showDocumentation": {
-		"enable": true
-	},
 	"eslint.format.enable": true,
-	"eslint.validate": ["typescript", "javascript", "ts", "js"],
+	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 	// =====================
 	//? JSON Settings
 	// =====================
@@ -113,7 +113,7 @@
 	"material-icon-theme.folders.color": "#7cb342",
 	"material-icon-theme.files.associations": {
 		"tsconfig.json": "svgo",
-		"tsconfig.eslint.json": "eslint",
+		"tsconfig.eslint.json": "eslint"
 	},
 	"material-icon-theme.folders.associations": {
 		"workflows": "github",
@@ -144,6 +144,7 @@
 	"files.watcherExclude": {
 		"**/.git/objects/**": true,
 		"**/node_modules/**": true,
-		"**/docs/**": true,
-	}
+		"**/docs/**": true
+	},
+	"typescript.tsdk": "node_modules/typescript/lib"
 }
