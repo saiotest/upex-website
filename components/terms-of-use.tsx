@@ -14,7 +14,7 @@ export function TermsOfUse() {
 					<p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
 					<p>
 						We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the{' '}
-						<a href="https://www.termsfeed.com/privacy-policy-generator/" rel="noopener" target="_blank">
+						<a href="https://www.termsfeed.com/privacy-policy-generator/" rel="noopener noreferrer" target="_blank">
 							Privacy Policy Generator
 						</a>
 						.
@@ -78,7 +78,7 @@ export function TermsOfUse() {
 						<li>
 							<p>
 								<strong>Website</strong> refers to UPEX, accessible from{' '}
-								<a href="https://upexgalaxy.com" rel="external nofollow noopener" target="_blank">
+								<a href="https://upexgalaxy.com" rel="external nofollow noopener noreferrer" target="_blank">
 									https://upexgalaxy.com
 								</a>
 							</p>
@@ -124,7 +124,7 @@ export function TermsOfUse() {
 					</ul>
 					<p>
 						Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on{' '}
-						<a href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies" rel="noopener" target="_blank">
+						<a href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies" rel="noopener noreferrer" target="_blank">
 							TermsFeed website
 						</a>{' '}
 						article.

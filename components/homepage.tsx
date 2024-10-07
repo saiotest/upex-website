@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -124,12 +125,12 @@ export function Homepage() {
 						</TooltipProvider>
 
 						<div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-							<a href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener">
+							<a href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener noreferrer">
 								<Button className="bg-[#00FFFF] hover:bg-[#00D0D0] text-[#020B2D]" size="lg">
 									{hero('tryWorkspaceFree')}
 								</Button>
 							</a>
-							<a href="https://upexdocu.atlassian.net/wiki/spaces/GX/overview" target="_blank" rel="noopener">
+							<a href="https://upexdocu.atlassian.net/wiki/spaces/GX/overview" target="_blank" rel="noopener noreferrer">
 								<Button variant="outline" className="bg-transparent border-white text-white hover:bg-[#8A2BE2] hover:text-white hover:border-[#8A2BE2]" size="lg">
 									{hero('exploreGalaxy')}
 								</Button>
@@ -179,7 +180,7 @@ export function Homepage() {
 								<Rocket className="w-12 h-12 mb-4 mx-auto text-[#00FFFF]" />
 								<h3 className="text-xl font-semibold mb-2 text-white">{serv('cards.sandbox.title')}</h3>
 								<p className="text-white">{serv('cards.sandbox.description')}</p>
-								<a href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener">
+								<a href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener noreferrer">
 									<Button variant="link" className="mt-4 text-[#00FFFF]">
 										{serv('cards.sandbox.link')}
 									</Button>
@@ -189,7 +190,7 @@ export function Homepage() {
 								<Book className="w-12 h-12 mb-4 mx-auto text-[#00FFFF]" />
 								<h3 className="text-xl font-semibold mb-2 text-white">{serv('cards.blackhole.title')}</h3>
 								<p className="text-white">{serv('cards.blackhole.description')}</p>
-								<a href="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" target="_blank" rel="noopener">
+								<a href="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" target="_blank" rel="noopener noreferrer">
 									<Button variant="link" className="mt-4 text-[#00FFFF]">
 										{serv('cards.blackhole.link')}
 									</Button>
@@ -199,7 +200,7 @@ export function Homepage() {
 								<Castle className="w-12 h-12 mb-4 mx-auto text-[#00FFFF]" />
 								<h3 className="text-xl font-semibold mb-2 text-white">{serv('cards.galaxy.title')}</h3>
 								<p className="text-white">{serv('cards.galaxy.description')}</p>
-								<a href="https://upex.docu.upexgalaxy.com/wiki/x/L4YF" target="_blank" rel="noopener">
+								<a href="https://upex.docu.upexgalaxy.com/wiki/x/L4YF" target="_blank" rel="noopener noreferrer">
 									<Button variant="link" className="mt-4 text-[#00FFFF]">
 										{serv('cards.galaxy.link')}
 									</Button>
@@ -231,13 +232,13 @@ export function Homepage() {
 							<h3 className="text-2xl font-bold mb-4 text-white text-center">{com('title')}</h3>
 							<p className="mb-6 text-white text-center">{com('description')}</p>
 							<div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-								<a href="https://join.slack.com/t/upexqa/shared_invite/zt-2p2lxo03o-DeBuiJNRqlSKAID~XdxE2Q" target="_blank" rel="noopener">
+								<a href="https://join.slack.com/t/upexqa/shared_invite/zt-2p2lxo03o-DeBuiJNRqlSKAID~XdxE2Q" target="_blank" rel="noopener noreferrer">
 									<Button className="bg-[#4A154B] hover:bg-[#3A0F3B]">
 										<Slack className="mr-2" />
 										{com('join-slack')}
 									</Button>
 								</a>
-								<a href="https://discord.gg/aCC6t4Ut9k" target="_blank" rel="noopener">
+								<a href="https://discord.gg/aCC6t4Ut9k" target="_blank" rel="noopener noreferrer">
 									<Button className="bg-[#7289DA] hover:bg-[#5269BA]">
 										<MessageCircle className="mr-2" />
 										{com('join-discord')}
