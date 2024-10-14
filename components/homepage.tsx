@@ -3,12 +3,14 @@
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card } from '@/components/ui/card';
+import { GlassCard } from '@/components/ui/glass-card';
 import { Search, Book, Briefcase, Award, Slack, MessageCircle, Rocket, Castle, Satellite, Code, GitBranch, CheckSquare, Database, Send, FileCode, TrendingUp } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { Link } from '@/i18n.config';
 
 export function Homepage() {
 	const hero = useTranslations('hero');
@@ -21,34 +23,39 @@ export function Homepage() {
 		<div className="min-h-screen bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] text-white">
 			<Header />
 			<main>
+				{/**---- SECTION: HERO BANNER ----*/}
 				<section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] py-20 px-4">
 					<div className="text-center max-w-5xl mx-auto">
-						<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 mt-20">
-							<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#80D8FF] via-[#B388FF] to-[#8C9EFF]">{hero('title.part1')}</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00FFFF] via-[#FF00FF] to-[#FF00FF]">{hero('title.part2')}</span> <br />
-							<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C0C0C0] via-[#E5E4E2] to-[#D3D3D3]">{hero('title.part3')}</span>
+						{/* ---- HERO TITLES ---- */}
+						<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 mt-20 md:whitespace-nowrap">
+							<div className="md:whitespace-nowrap">
+								<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04f5f9] via-[#575fff] to-[#8c45ff]">{hero('title.part1')}</span>
+								<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#b171ff] via-[#e658ff] to-[#ff04f7]">{hero('title.part2')}</span> <br />
+							</div>
+							<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#f4ff7a] via-[#19fb09] to-[#07fd9f]">{hero('title.part3')}</span>
 						</h1>
-						<h2 className="text-2xl md:text-3xl text-[#00FFFF] mb-8">{hero('subtitle')}</h2>
-
+						<h2 className="text-2xl md:text-2xl text-[#00FFFF] mb-8 md:whitespace-nowrap">{hero('subtitle')}</h2>
 						<p className="text-lg md:text-xl mb-8">{hero('description')}</p>
 
-						{/* ---- Search Bar ---- */}
+						{/* ---- Search Bar (COMMING SOON) ---- */}
 						{/* <div className="max-w-2xl mx-auto mb-12 relative">
-              <Input 
-                type="text" 
-                placeholder={hero("searchPlaceholder")} 
-                className="w-full px-4 py-3 pl-12 rounded-lg bg-white text-[#020B2D] text-lg"
-              />
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#020B2D]" size={24} />
-            </div> */}
-						{/* ---- ---------- ---- */}
+								<Input 
+									type="text" 
+									placeholder={hero("searchPlaceholder")} 
+									className="w-full px-4 py-3 pl-12 rounded-lg bg-white text-[#020B2D] text-lg"
+								/>
+								<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#020B2D]" size={24} />
+							</div> */}
 
+						{/**---- ICON TOOL TIPS ----*/}
 						<TooltipProvider>
-							<div className="flex flex-wrap justify-center gap-6 mb-12">
+							<div className="flex justify-center gap-4 mb-12">
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											<Slack className="w-8 h-8 mb-2 text-[#00FFFF]" />
-											<span className="text-sm">Slack</span>
+											{/* <Slack className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
+											<Image src="/slack_icon.svg" alt="Slack" width={32} height={32} className="w-14 h-14 mb-0" />
+											<span className="text-xs">Slack</span>
 										</div>
 									</TooltipTrigger>
 									<TooltipContent>
@@ -58,30 +65,32 @@ export function Homepage() {
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											<CheckSquare className="w-8 h-8 mb-2 text-[#00FFFF]" />
-											<span className="text-sm">Jira</span>
+											{/* <CheckSquare className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
+											<Image src="/jira_icon.svg" alt="Jira" width={32} height={32} className="w-14 h-14 mb-0" />
+											<span className="text-xs">Jira</span>
 										</div>
 									</TooltipTrigger>
 									<TooltipContent>
 										<p>{hero('tooltips.jira')}</p>
 									</TooltipContent>
 								</Tooltip>
-								<Tooltip>
+								{/* <Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
 											<Code className="w-8 h-8 mb-2 text-[#00FFFF]" />
-											<span className="text-sm">XRay</span>
+											<span className="text-xs">XRay</span>
 										</div>
 									</TooltipTrigger>
 									<TooltipContent>
 										<p>{hero('tooltips.xray')}</p>
 									</TooltipContent>
-								</Tooltip>
+								</Tooltip> */}
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											<Database className="w-8 h-8 mb-2 text-[#00FFFF]" />
-											<span className="text-sm">MySQL</span>
+											{/* <Database className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
+											<Image src="/sql_icon.svg" alt="sql" width={32} height={32} className="w-14 h-14 mb-0" />
+											<span className="text-xs">MySQL</span>
 										</div>
 									</TooltipTrigger>
 									<TooltipContent>
@@ -91,8 +100,9 @@ export function Homepage() {
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											<Send className="w-8 h-8 mb-2 text-[#00FFFF]" />
-											<span className="text-sm">Postman</span>
+											{/* <Send className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
+											<Image src="/postman_icon.svg" alt="postman" width={32} height={32} className="w-14 h-14 mb-0" />
+											<span className="text-xs">Postman</span>
 										</div>
 									</TooltipTrigger>
 									<TooltipContent>
@@ -102,8 +112,9 @@ export function Homepage() {
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											<FileCode className="w-8 h-8 mb-2 text-[#00FFFF]" />
-											<span className="text-sm">VSCode</span>
+											{/* <FileCode className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
+											<Image src="/vscode_icon.svg" alt="vscode" width={32} height={32} className="w-14 h-14 mb-0" />
+											<span className="text-xs">VSCode</span>
 										</div>
 									</TooltipTrigger>
 									<TooltipContent>
@@ -113,8 +124,9 @@ export function Homepage() {
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											<GitBranch className="w-8 h-8 mb-2 text-[#00FFFF]" />
-											<span className="text-sm">GitHub</span>
+											{/* <GitBranch className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
+											<Image src="/github_icon.svg" alt="Github" width={32} height={32} className="w-14 h-14 mb-0" />
+											<span className="text-xs">GitHub</span>
 										</div>
 									</TooltipTrigger>
 									<TooltipContent>
@@ -124,18 +136,21 @@ export function Homepage() {
 							</div>
 						</TooltipProvider>
 
+						{/**---- CALL TO ACTIONS ----*/}
 						<div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-							<a href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener noreferrer">
+							<Link href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener noreferrer" passHref>
 								<Button className="bg-[#00FFFF] hover:bg-[#00D0D0] text-[#020B2D]" size="lg">
 									{hero('tryWorkspaceFree')}
 								</Button>
-							</a>
-							<a href="https://upexdocu.atlassian.net/wiki/spaces/GX/overview" target="_blank" rel="noopener noreferrer">
+							</Link>
+							<Link href="/explore" target="_blank" rel="noopener noreferrer" passHref>
 								<Button variant="outline" className="bg-transparent border-white text-white hover:bg-[#8A2BE2] hover:text-white hover:border-[#8A2BE2]" size="lg">
 									{hero('exploreGalaxy')}
 								</Button>
-							</a>
+							</Link>
 						</div>
+
+						{/**---- METRICS ----*/}
 						<div className="mb-20 mt-12">
 							{/* <h3 className="text-2xl font-bold mb-6 text-white text-center">{imp("title")}</h3> */}
 							<div className="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
@@ -172,48 +187,16 @@ export function Homepage() {
 					</div>
 				</section>
 
+				{/**---- SECTION: MAIN CONTENT ----*/}
 				<section className="bg-gradient-to-b from-[#0A3A7E] via-[#1E0B4A] to-[#0F5ABE] py-20 px-4">
 					<div className="container mx-auto">
+						{/* ---- CARDS (SERVICES) ---- */}
 						<h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{serv('title')}</h2>
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-							<Card className="p-6 bg-[#1A2C5A] border-[#3D4E7A]">
-								<Rocket className="w-12 h-12 mb-4 mx-auto text-[#00FFFF]" />
-								<h3 className="text-xl font-semibold mb-2 text-white">{serv('cards.sandbox.title')}</h3>
-								<p className="text-white">{serv('cards.sandbox.description')}</p>
-								<a href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener noreferrer">
-									<Button variant="link" className="mt-4 text-[#00FFFF]">
-										{serv('cards.sandbox.link')}
-									</Button>
-								</a>
-							</Card>
-							<Card className="p-6 bg-[#1A2C5A] border-[#3D4E7A]">
-								<Book className="w-12 h-12 mb-4 mx-auto text-[#00FFFF]" />
-								<h3 className="text-xl font-semibold mb-2 text-white">{serv('cards.blackhole.title')}</h3>
-								<p className="text-white">{serv('cards.blackhole.description')}</p>
-								<a href="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" target="_blank" rel="noopener noreferrer">
-									<Button variant="link" className="mt-4 text-[#00FFFF]">
-										{serv('cards.blackhole.link')}
-									</Button>
-								</a>
-							</Card>
-							<Card className="p-6 bg-[#1A2C5A] border-[#3D4E7A]">
-								<Castle className="w-12 h-12 mb-4 mx-auto text-[#00FFFF]" />
-								<h3 className="text-xl font-semibold mb-2 text-white">{serv('cards.galaxy.title')}</h3>
-								<p className="text-white">{serv('cards.galaxy.description')}</p>
-								<a href="https://upex.docu.upexgalaxy.com/wiki/x/L4YF" target="_blank" rel="noopener noreferrer">
-									<Button variant="link" className="mt-4 text-[#00FFFF]">
-										{serv('cards.galaxy.link')}
-									</Button>
-								</a>
-							</Card>
-							<Card className="p-6 bg-[#1A2C5A] border-[#3D4E7A]">
-								<Satellite className="w-12 h-12 mb-4 mx-auto text-[#00FFFF]" />
-								<h3 className="text-xl font-semibold mb-2 text-white">{serv('cards.satellite.title')}</h3>
-								<p className="text-white">{serv('cards.satellite.description')}</p>
-								<Button variant="link" className="mt-4 text-[#00FFFF]" disabled>
-									{serv('cards.satellite.link')}
-								</Button>
-							</Card>
+							<GlassCard icon="/cohete_icon.svg" title={serv('cards.sandbox.title')} description={serv('cards.sandbox.description')} buttonText={serv('cards.sandbox.link')} linkTo="https://forms.gle/ke4kadCJWRrDkDTXA" glowColor="from-cyan-300 to-blue-600" />
+							<GlassCard reactIcon={Book} title={serv('cards.blackhole.title')} description={serv('cards.blackhole.description')} buttonText={serv('cards.blackhole.link')} linkTo="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" glowColor="from-cyan-300 to-blue-600" />
+							<GlassCard reactIcon={Castle} title={serv('cards.galaxy.title')} description={serv('cards.galaxy.description')} buttonText={serv('cards.galaxy.link')} linkTo="https://upex.docu.upexgalaxy.com/wiki/x/L4YF" glowColor="from-cyan-300 to-blue-600" />
+							<GlassCard reactIcon={Satellite} title={serv('cards.satellite.title')} description={serv('cards.satellite.description')} buttonText={serv('cards.satellite.link')} linkTo="#" glowColor="from-cyan-300 to-blue-600" />
 						</div>
 
 						<div className="bg-[#1A2C5A] p-6 md:p-8 rounded-lg mb-20">

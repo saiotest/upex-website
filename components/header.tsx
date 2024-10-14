@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Menu } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { useTranslations } from 'next-intl';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Link, type Locale } from '@/i18n.config';
+import { useLocale, useTranslations } from 'next-intl';
+import LocaleSwitcher from './localSwitcher';
 
-export default function Header() {
+export default function Header({ hidden }: { hidden?: boolean }) {
+	const locale = useLocale() as Locale;
 	const header = useTranslations('header');
 	const [scrolled, setScrolled] = useState(false);
 
@@ -24,14 +26,16 @@ export default function Header() {
 		window.open('https://upexgalaxy47.atlassian.net/jira/', '_blank', 'noopener,noreferrer');
 	};
 
-	return (
+	const Header = (
 		<header className={`fixed w-full z-10 transition-all duration-300 ${scrolled ? 'bg-[#020B2D] shadow-lg' : 'bg-transparent'}`}>
 			<div className="container mx-auto px-4 py-4 md:py-6 flex justify-between items-center">
+				{/** LOGO */}
 				<Link href="/" className="flex items-center">
 					<Image src="/logo.png" alt="UPEX Logo" width={720} height={240} className="h-10 w-auto" />
 					<span className="sr-only">UPEX</span>
 				</Link>
-				{/* <div className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2]">UPEX</div> */}
+
+				{/** NAVIGATION BAR */}
 				<nav className="hidden md:block">
 					<ul className="flex space-x-4 md:space-x-6">
 						<li>
@@ -61,10 +65,25 @@ export default function Header() {
 						</li>
 					</ul>
 				</nav>
-				<div className="flex items-center space-x-4">
+
+				{/** SEARCH BAR, LOCAL-SWITCHER, LOGIN BUTTON AND MOBILE MENU */}
+				<div className="flex items-center space-x-2">
+					<div className="hidden md:block flex items-center space-x-2">
+						{/** SEARCH BAR IN THE HEADER (COMMING SOON) */}
+						{/* <div className="relative">
+							<input type="search" placeholder="Buscar..." className="bg-[#1a1a4a] text-white rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-[#00ffff]" />
+							<Button title="D" className="absolute right-3 top-1/2 transform -translate-y-1/2">
+								<svg className="w-5 h-5 text-[#00ffff]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+								</svg>
+							</Button>
+						</div> */}
+						<LocaleSwitcher locale={locale} isMobile={false} />
+					</div>
 					<Button onClick={handleLoginClick} variant="outline" className="hidden md:inline-flex bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">
 						Login
 					</Button>
+					{/** ----- MOBILE MENU ----- */}
 					<Sheet>
 						<SheetTrigger asChild>
 							<Button variant="ghost" size="icon" className="md:hidden">
@@ -73,6 +92,9 @@ export default function Header() {
 							</Button>
 						</SheetTrigger>
 						<SheetContent side="right" className="w-[300px] sm:w-[400px] bg-[#020B2D]">
+							<SheetHeader>
+								<SheetTitle className="text-[#00ffff]">Menu</SheetTitle>
+							</SheetHeader>
 							<nav className="flex flex-col space-y-4 mt-8">
 								<Link href="https://upexgalaxy47.atlassian.net/jira/software/c/projects/BOX/boards/24" className="text-lg hover:text-[#00FFFF]">
 									{header('workspace')}
@@ -89,14 +111,19 @@ export default function Header() {
 								<Link href="https://upexqa.slack.com" className="text-lg hover:text-[#00FFFF]">
 									{header('community')}
 								</Link>
-								<Button onClick={handleLoginClick} className="mt-4 bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">
-									Login
-								</Button>
 							</nav>
+							<div className="mt-4">
+								<h3 className="text-[#00ffff] mb-2">Idioma</h3>
+								<LocaleSwitcher locale={locale} isMobile={true} />
+							</div>
+							<Button onClick={handleLoginClick} className="mt-4 bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">
+								Login
+							</Button>
 						</SheetContent>
 					</Sheet>
 				</div>
 			</div>
 		</header>
 	);
+	return hidden ? null : Header;
 }

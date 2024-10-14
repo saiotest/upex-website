@@ -3,9 +3,9 @@ import { locales } from './i18n';
 
 export default createMiddleware({
 	locales,
-	defaultLocale: 'en',
-})
+	defaultLocale: 'en'
+});
 
 export const config = {
-	matcher: ['/', '/(en|es)/:path*'],
-}
+	matcher: ['/', '/(en|es)/:path*']
+};

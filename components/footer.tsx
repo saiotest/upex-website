@@ -1,11 +1,11 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n.config';
 import { useTranslations } from 'next-intl';
 
-export default function Header() {
+export default function Footer({ hidden }: { hidden?: boolean }) {
 	const footer = useTranslations('footer');
-	return (
+	const FooterComponent = (
 		<footer className="bg-[#020B2D] py-6 px-4">
 			<div className="container mx-auto text-center">
 				<p className="mb-4 text-white">{footer('description')}</p>
@@ -23,4 +23,5 @@ export default function Header() {
 			</div>
 		</footer>
 	);
+	return hidden ? null : FooterComponent;
 }

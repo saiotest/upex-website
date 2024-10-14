@@ -1,101 +1,101 @@
 {
-  "header": {
-    "workspace": "Workspace",
-    "courses": "Courses",
-    "plans": "Careers",
-    "assistance": "Assistance",
-    "community": "Community"
-  },
-  "hero": {
-    "title": {
-      "part1": "Software Tester",
-      "part2": "Experience",
-      "part3": "for your CV"
-    },
-    "subtitle": "The World's First Realistic QA Workspace",
-    "description": "Immerse yourself in a complete, true-to-life QA environment. Gain real work experience that surpasses traditional internships or entry-level positions.",
-    "searchPlaceholder": "What do you want to learn in QA?",
-    "tryWorkspaceFree": "Try Workspace Free",
-    "exploreGalaxy": "Explore UPEX Galaxy",
-    "tooltips": {
-      "slack": "Streamline team communication and integrate with QA tools for real-time notifications and collaborative problem-solving.",
-      "jira": "Manage QA workflows, track bugs, and collaborate on test cases using industry-standard project management tools.",
-      "xray": "Enhance test management within Jira, enabling comprehensive test planning, execution, and reporting.",
-      "mysql": "Learn database testing techniques and SQL querying for comprehensive backend quality assurance.",
-      "postman": "Master API testing and automation to ensure robust backend functionality and integration.",
-      "vscode": "Utilize a powerful IDE for writing and managing test scripts, enhancing your coding skills in QA automation.",
-      "github": "Practice version control, collaborate on test code, and integrate with CI/CD pipelines for efficient QA processes."
-    }
-  },
-  "services": {
-    "title": "Revolutionizing QA Education and Experience",
-    "cards": {
-      "sandbox": {
-        "title": "UPEX Sandbox",
-        "description": "Free Jira workspace for hands-on QA practice. Perfect for beginners to experience real testing scenarios.",
-        "link": "Try for Free"
-      },
-      "blackhole": {
-        "title": "UPEX Blackhole",
-        "description": "Comprehensive online courses covering fundamental to advanced QA skills for aspiring testers.",
-        "link": "Explore Courses"
-      },
-      "galaxy": {
-        "title": "UPEX Galaxy",
-        "description": "Our flagship product: An immersive, realistic QA workspace that simulates and surpasses real-world environments.",
-        "link": "Get Started"
-      },
-      "satellite": {
-        "title": "UPEX Satellite (New)",
-        "description": "Connecting skilled UPEX graduates with software companies seeking qualified QA talent. (Coming Soon)",
-        "link": "Learn More"
-      }
-    }
-  },
-  "benefits": {
-    "title": "Why UPEX Galaxy is Revolutionary?",
-    "items": {
-      "realistic": "Complete, realistic QA workspace with hands-on experience - unmatched in the industry.",
-      "community": "Join a community of like-minded testers and professionals",
-      "true-to-life": "True-to-life work experience surpassing entry-level positions",
-      "integrated": "Integration of industry-standard tools: Jira, XRay, GitHub, CI pipelines",
-      "structured": "Structured environment promoting QA best practices",
-      "educational": "Bridge the gap between education and professional work"
-    }
-  },
-  "community": {
-    "title": "Join the UPEX Community",
-    "description": "Connect with fellow QA professionals, share knowledge, and stay updated with the latest in software testing.",
-    "join-slack": "Join us on Slack",
-    "join-discord": "Join us on Discord"
-  },
-  "impact": {
-    "title": "Our Impact",
-    "items": {
-      "1": {
-        "metric": "5,000+",
-        "unit": "Jira Tasks Assigned"
-      },
-      "2": {
-        "metric": "10,000+",
-        "unit": "QA Engineers Trained"
-      },
-      "3": {
-        "metric": "100+",
-        "unit": "IT Companies Trusted"
-      },
-      "4": {
-        "metric": "90%",
-        "unit": "Semi-Senior Hire Rate"
-      }
-    }
-  },
-  "footer": {
-    "description": "Experience the future of QA with our revolutionary Galaxy workspace",
-    "aboutUs": "About Us",
-    "contact": "Contact",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "rightsReserved": "All Rights Reserved"
-  }
+	"header": {
+		"workspace": "Workspace",
+		"courses": "Courses",
+		"plans": "Careers",
+		"assistance": "Assistance",
+		"community": "Community"
+	},
+	"hero": {
+		"title": {
+			"part1": "Courses. ",
+			"part2": "Experience. Tutorships.",
+			"part3": "to work as QA"
+		},
+		"subtitle": "The World's Most COMPLETE Workspace for Sofware Testing",
+		"description": "Immerse yourself in a complete, true-to-life QA environment. Gain realistic work experience that surpasses traditional internships or entry-level positions.",
+		"searchPlaceholder": "What do you want to learn in QA?",
+		"tryWorkspaceFree": "Try Workspace Free",
+		"exploreGalaxy": "Explore UPEX Galaxy",
+		"tooltips": {
+			"slack": "Streamline team communication and integrate with QA tools for real-time notifications and collaborative problem-solving.",
+			"jira": "Manage QA workflows, track bugs, and collaborate on test cases using industry-standard project management tools.",
+			"xray": "Enhance test management within Jira, enabling comprehensive test planning, execution, and reporting.",
+			"mysql": "Learn database testing techniques and SQL querying for comprehensive backend quality assurance.",
+			"postman": "Master API testing and automation to ensure robust backend functionality and integration.",
+			"vscode": "Utilize a powerful IDE for writing and managing test scripts, enhancing your coding skills in QA automation.",
+			"github": "Practice version control, collaborate on test code, and integrate with CI/CD pipelines for efficient QA processes."
+		}
+	},
+	"services": {
+		"title": "Revolutionizing QA Education and Experience",
+		"cards": {
+			"sandbox": {
+				"title": "UPEX Sandbox",
+				"description": "Free Jira workspace for hands-on QA practice. Perfect for beginners to experience real testing scenarios.",
+				"link": "Try for Free"
+			},
+			"blackhole": {
+				"title": "UPEX Blackhole",
+				"description": "Comprehensive online courses covering fundamental to advanced QA skills for aspiring testers.",
+				"link": "Explore Courses"
+			},
+			"galaxy": {
+				"title": "UPEX Galaxy",
+				"description": "Our flagship product: An immersive, realistic QA workspace that simulates and surpasses real-world environments.",
+				"link": "Get Started"
+			},
+			"satellite": {
+				"title": "UPEX Satellite (New)",
+				"description": "Connecting skilled UPEX graduates with software companies seeking qualified QA talent. (Coming Soon)",
+				"link": "Learn More"
+			}
+		}
+	},
+	"benefits": {
+		"title": "Why UPEX Galaxy is Revolutionary?",
+		"items": {
+			"realistic": "Complete, realistic QA workspace with hands-on experience - unmatched in the industry.",
+			"community": "Join a community of like-minded testers and professionals",
+			"true-to-life": "True-to-life work experience surpassing entry-level positions",
+			"integrated": "Integration of industry-standard tools: Jira, XRay, GitHub, CI pipelines",
+			"structured": "Structured environment promoting QA best practices",
+			"educational": "Bridge the gap between education and professional work"
+		}
+	},
+	"community": {
+		"title": "Join the UPEX Community",
+		"description": "Connect with fellow QA professionals, share knowledge, and stay updated with the latest in software testing.",
+		"join-slack": "Join us on Slack",
+		"join-discord": "Join us on Discord"
+	},
+	"impact": {
+		"title": "Our Impact",
+		"items": {
+			"1": {
+				"metric": "5,000+",
+				"unit": "Jira Tasks Assigned"
+			},
+			"2": {
+				"metric": "10,000+",
+				"unit": "QA Engineers Trained"
+			},
+			"3": {
+				"metric": "100+",
+				"unit": "IT Companies Trusted"
+			},
+			"4": {
+				"metric": "90%",
+				"unit": "Semi-Senior Hire Rate"
+			}
+		}
+	},
+	"footer": {
+		"description": "Experience the future of QA with our revolutionary Galaxy workspace",
+		"aboutUs": "About Us",
+		"contact": "Contact",
+		"privacyPolicy": "Privacy Policy",
+		"termsOfService": "Terms of Service",
+		"rightsReserved": "All Rights Reserved"
+	}
 }
