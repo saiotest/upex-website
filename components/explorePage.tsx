@@ -5,6 +5,7 @@ import './styles/explorepage.css';
 import Main3ServicesCardsComponent from './mainServicesCards';
 import Header from './header';
 import Footer from './footer';
+import WhatsAppButton from './whatsapp-button';
 // import Footer from './footer';
 
 export function ExplorePageComponent() {
@@ -41,6 +42,7 @@ export function ExplorePageComponent() {
 						<Main3ServicesCardsComponent />
 					</div>
 				</section>
+				<WhatsAppButton />
 			</main>
 			<Footer hidden />
 		</div>

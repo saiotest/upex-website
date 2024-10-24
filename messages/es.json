@@ -1,20 +1,21 @@
 {
 	"header": {
-		"workspace": "Workspace",
 		"courses": "Cursos",
-		"plans": "Carreras",
-		"assistance": "Asesoría",
-		"community": "Comunidad",
-		"login": "Login"
+		"experience": "Experiencia",
+		"cometa": "Carreras",
+		"tutorship": "Tutoría",
+		"community": "Comunidad"
 	},
 	"hero": {
 		"title": {
 			"part1": "Cursos. ",
 			"part2": "Experiencia. Tutoría.",
-			"part3": "para trabajar de QA"
+			"part3": "para Software Testing"
 		},
-		"subtitle": "El Espacio de Trabajo más COMPLETO del Mundo para Sofware Testing",
-		"description": "Sumérgete en un entorno de Software Testing (QA) realista y profesional. Adquiere experiencia laboral práctica que supera las pasantías tradicionales.",
+		"subtitle": "El Espacio de Trabajo más COMPLETO del Mundo para QA Engineers",
+		"description_1": "Sumérgete en un Entorno Realista y Profesional para ",
+		"description_2": "QA Analyst y QA Automation.",
+		"description_3": "APRENDE Y GANA EXPERIENCIA LABORAL para ser el Tester que las Empresas Desean!",
 		"searchPlaceholder": "Qué te gustaría aprender en QA?",
 		"tryWorkspaceFree": "Prueba el Workspace Gratis",
 		"exploreGalaxy": "Explora UPEX Galaxy",
@@ -28,8 +29,12 @@
 			"github": "Practica el control de versiones, colabora en el código de prueba e intégralo con pipelines de CI/CD para procesos de QA eficientes."
 		}
 	},
+	"quote": {
+		"p1": "El verdadero éxito en QA no se mide por lo que sabes, sino por lo que eres capaz de construir con ese conocimiento.",
+		"p2": "En UPEX, convertimos el aprendizaje en experiencia práctica para que puedas asegurar el trabajo de tus sueños o llevar tu carrera al siguiente nivel."
+	},
 	"services": {
-		"title": "Revolucionando la Educación y Experiencia en QA",
+		"title": "Nuestra Constelación de Servicios",
 		"cards": {
 			"sandbox": {
 				"title": "UPEX Sandbox",
@@ -75,11 +80,11 @@
 		"items": {
 			"1": {
 				"metric": "5,000+",
-				"unit": "Tareas de Jira Asignadas"
+				"unit": "Tareas Auto-Asignadas"
 			},
 			"2": {
-				"metric": "10,000+",
-				"unit": "Ingenieros QA Entrenados"
+				"metric": "2,000+",
+				"unit": "QA Testers Entrenados"
 			},
 			"3": {
 				"metric": "100+",
@@ -87,9 +92,13 @@
 			},
 			"4": {
 				"metric": "90%",
-				"unit": "Tasa de Contratación Semi-Senior"
+				"unit": "Tasa de Contratación"
 			}
 		}
+	},
+	"join": {
+		"title": "¿Listo para despegar tu carrera?",
+		"description": "Explora y comienza tu viaje hacia el éxito en QA"
 	},
 	"footer": {
 		"description": "Experimenta el futuro de QA con nuestro revolucionario espacio de trabajo Galaxy",

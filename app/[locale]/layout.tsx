@@ -9,7 +9,7 @@ const geistSans = localFont({
 	variable: '--font-geist-sans',
 	weight: '100 900'
 });
-const geistMono = localFont({
+const codeFont = localFont({
 	src: '../fonts/CascadiaCodeItalic.woff2',
 	variable: '--font-geist-mono',
 	weight: '100 900'
@@ -29,7 +29,7 @@ export default async function RootLayout({
 	return (
 		<NextIntlClientProvider messages={messages}>
 			<html lang="en">
-				<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+				<body className={`${geistSans.variable} ${codeFont.variable} antialiased`}>{children}</body>
 			</html>
 		</NextIntlClientProvider>
 	);

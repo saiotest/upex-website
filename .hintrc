@@ -8,7 +8,9 @@
       {
         "ignore": [
           "text-wrap",
-          "text-wrap: balance"
+          "text-wrap: balance",
+          "scrollbar-width",
+          "scrollbar-width: none"
         ]
       }
     ],

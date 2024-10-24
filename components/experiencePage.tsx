@@ -3,15 +3,12 @@
 import { ArrowUpDown, Book, Users, ChevronLeft, Rocket } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Header from './header';
 import Footer from '@/components/footer';
 import { Link } from '@/i18n.config';
-
-// const gotoLink = (link: string, newWin?: boolean) => {
-// 	if (!newWin) return window.open(link, '_self');
-// 	return useRouter().push(link);
-// };
+import WhatsAppButton from './whatsapp-button';
 
 export function ExperiencePageComponent() {
 	return (
@@ -45,8 +42,8 @@ export function ExperiencePageComponent() {
 				<section className="space-y-6">
 					<h2 className="text-3xl font-bold text-center text-[#ffd549]">¿Es tu PRIMERA SUBSCRIPCIÓN?</h2>
 					<div className="grid md:grid-cols-2 gap-6">
-						<SubscriptionCard emoji="🥹" title="¡Sí! primera vez" description="Si es tu primera vez, tienes REGISTRO GRATIS a la Galaxia! 🚀" buttonText="REGISTRARSE y SUSCRIBIRSE →" linkTo="/experiencia/sub/register" />
-						<SubscriptionCard emoji="😎" title="Ya estoy en Galaxy" description="Si ya eres parte de la Galaxia, Bienvenido de vuelta, Crack!⭐" buttonText="SUSCRIBIRSE DE VUELTA →" linkTo="/experiencia/sub/renew" />
+						<SubscriptionCard emoji="🥹" title="¡Sí! primera vez" description="Si es tu primera vez, tienes REGISTRO GRATIS a la Galaxia! 🚀" buttonText="REGISTRARSE y SUSCRIBIRSE →" linkTo="https://upexgalaxy.zapier.app/register" />
+						<SubscriptionCard emoji="😎" title="Ya estoy en UPEX Galaxy" description="Si ya eres parte de la Galaxia, Bienvenido de vuelta, Crack!⭐" buttonText="SUSCRIBIRSE DE VUELTA →" linkTo="https://upexgalaxy.zapier.app/subscribe-sprints" />
 					</div>
 				</section>
 
@@ -72,6 +69,7 @@ export function ExperiencePageComponent() {
 					<ChevronLeft className="mr-2 h-4 w-4" />
 					<Link href="#">Volver al Inicio</Link>
 				</Button>
+				<WhatsAppButton />
 			</main>
 			<Footer />
 		</div>
@@ -79,6 +77,10 @@ export function ExperiencePageComponent() {
 }
 
 function HeroBanner() {
+	const benefits = [
+		{ icon: Users, title: 'Comunidad Privada', description: 'Acceso permanente a Slack' },
+		{ icon: Book, title: 'Guías Exclusivas', description: 'Guías únicas en Confluence' }
+	];
 	const gotoSection = (sectionId: string) => {
 		return document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
 	};
@@ -92,7 +94,7 @@ function HeroBanner() {
 			<main className="relative">
 				<div className="max-w-4xl mx-auto text-center space-y-6 mt-20">
 					<Rocket className="w-16 h-16 text-[#00ffff] mx-auto animate-bounce" />
-					<h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 mt-20 bg-clip-text text-transparent bg-gradient-to-r from-[#eaff00] via-[#01fff2] to-[#ff79eb]">
+					<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 mt-20 bg-clip-text text-transparent bg-gradient-to-r from-[#eaff00] via-[#01fff2] to-[#ff79eb]">
 						<span>¡Las puertas de</span>
 						<br />
 						<span>UPEX Galaxy</span>
@@ -100,21 +102,26 @@ function HeroBanner() {
 						<span>están abiertas!</span>
 					</h1>
 					<p className="text-xl md:text-2xl text-[#ededff] md:whitespace-nowrap">Ya no tienes que pagar una matrícula para entrar en nuestra galaxia.</p>
-					<div className="bg-[#2a2a5a] p-6 rounded-xl shadow-lg">
-						<h3 className="text-2xl font-semibold text-[#ff86e1] mb-4">Con tu PRIMERA SUSCRIPCIÓN, obtienes:</h3>
-						<p className="text-xl font-bold text-[#00ffff] mb-4">REGISTRO PERMANENTE A</p>
-						<ul className="text-lg space-y-2">
-							<li className="flex items-center justify-center text-[#ffc800]">
-								<span className="mr-2">🛰️</span> Comunidad Privada (SLACK)
-							</li>
-							<li className="flex items-center justify-center text-[#ffc800]">
-								<span className="mr-2">📚</span> Documentación Privada (Confluence)
-							</li>
-						</ul>
-					</div>
-					<Button onClick={() => gotoSection('suscripcion-upex-galaxy')} className="btn-scroll bg-[#9d00f8] hover:bg-[#cc00cc] text-white text-xl py-3 px-8">
-						¡Únete a la Galaxia Ahora!
-					</Button>
+					<motion.div className="bg-[#ffffff15] backdrop-blur-md rounded-2xl p-8 mb-12 shadow-xl" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5, delay: 0.1 }}>
+						<h2 className="text-3xl font-semibold mb-6 text-[#f879ff]">CON TU PRIMERA SUSCRIPCIÓN TE REGALAMOS:</h2>
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+							{benefits.map((benefit, index) => (
+								<motion.div key={index} className="flex flex-col items-center" initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.1 + index * 0.2 }}>
+									<benefit.icon size={48} className="text-[#ffc800] mb-4" />
+									<h3 className="text-2xl font-bold text-[#00ffff] mb-2">{benefit.title}</h3>
+									<p className="text-lg text-[#afd2ff]">{benefit.description}</p>
+								</motion.div>
+							))}
+						</div>
+					</motion.div>
+					<motion.div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4" initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1.1 }}>
+						<Button onClick={() => gotoSection('suscripcion-upex-galaxy')} className="bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white text-xl py-6 px-10 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg">
+							<span className="mr-2">¡ÚNETE A LA GALAXIA AHORA!</span>
+						</Button>
+						<Button onClick={() => gotoSection('suscripcion-upex-galaxy')} variant="outline" className="bg-transparent border-2 border-[#ffffff50] hover:text-white text-xl py-6 px-10 rounded-full hover:bg-[#ffffff20] transform hover:scale-105 transition-all duration-300">
+							¿Quieres Probarlo Gratis?
+						</Button>
+					</motion.div>
 				</div>
 			</main>
 		</div>
@@ -164,7 +171,7 @@ function OtherServiceCard({ icon, title, description, buttonText, linkTo, newTab
 				<div className="flex justify-center">{icon}</div>
 				<h3 className="text-xl font-semibold text-center text-[#00ffff]">{title}</h3>
 				<p className="text-center text-[#b0b0ff]">{description}</p>
-				<Button className="w-full bg-[#8a2be2] hover:bg-[#7a1bd2] text-white">
+				<Button className="w-full bg-[#8a2be2] hover:bg-[#cc00cc] text-white">
 					<Link href={linkTo} {...newTabProps}>
 						{buttonText}
 					</Link>

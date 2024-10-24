@@ -23,7 +23,7 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 	}, []);
 
 	const handleLoginClick = () => {
-		window.open('https://upexgalaxy47.atlassian.net/jira/', '_blank', 'noopener,noreferrer');
+		window.open('https://jira.upexgalaxy.com/', '_blank', 'noopener,noreferrer');
 	};
 
 	const Header = (
@@ -39,28 +39,35 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 				<nav className="hidden md:block">
 					<ul className="flex space-x-4 md:space-x-6">
 						<li>
-							<Link target="_blank" href="https://upexgalaxy47.atlassian.net/jira/software/c/projects/BOX/boards/24" className="hover:text-[#00FFFF]">
-								{header('workspace')}
-							</Link>
-						</li>
-						<li>
-							<Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" className="hover:text-[#00FFFF]">
+							{/** Go to UPEX Blackhole with /cursos Page */}
+							<Link target="_blank" href="/cursos" className="hover:text-[#00FFFF]">
 								{header('courses')}
 							</Link>
 						</li>
 						<li>
-							<Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="hover:text-[#00FFFF]">
-								{header('plans')}
+							{/** Go to UPEX Galaxy with /experiencia Page */}
+							<Link target="_blank" href="/experiencia" className="hover:text-[#00FFFF]">
+								{header('experience')}
 							</Link>
 						</li>
 						<li>
-							<Link target="_blank" href="https://wa.me/5491156633437" className="hover:text-[#00FFFF]">
-								{header('assistance')}
+							<Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="hover:text-[#00FFFF]">
+								{header('cometa')}
+							</Link>
+						</li>
+						<li>
+							<Link target="_blank" href="/tutores" className="hover:text-[#00FFFF]">
+								{header('tutorship')}
 							</Link>
 						</li>
 						<li>
 							<Link target="_blank" href="https://upexqa.slack.com" className="hover:text-[#00FFFF]">
 								{header('community')}
+							</Link>
+						</li>
+						<li>
+							<Link target="_blank" href="/sprints" className="hover:text-[#00FFFF]">
+								SPRINT-CALENDAR
 							</Link>
 						</li>
 					</ul>
@@ -80,8 +87,11 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 						</div> */}
 						<LocaleSwitcher locale={locale} isMobile={false} />
 					</div>
-					<Button onClick={handleLoginClick} variant="outline" className="hidden md:inline-flex bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">
-						Login
+					{/* <Button onClick={handleLoginClick} variant="outline" className="hidden md:inline-flex bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">
+						Jira
+					</Button> */}
+					<Button onClick={handleLoginClick} variant="outline" className="hidden md:inline-flex bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white rounded-full">
+						<span>Jira Workspace</span>
 					</Button>
 					{/** ----- MOBILE MENU ----- */}
 					<Sheet>
@@ -96,20 +106,20 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 								<SheetTitle className="text-[#00ffff]">Menu</SheetTitle>
 							</SheetHeader>
 							<nav className="flex flex-col space-y-4 mt-8">
-								<Link href="https://upexgalaxy47.atlassian.net/jira/software/c/projects/BOX/boards/24" className="text-lg hover:text-[#00FFFF]">
-									{header('workspace')}
-								</Link>
-								<Link href="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" className="text-lg hover:text-[#00FFFF]">
+								<Link href="/cursos" className="text-lg hover:text-[#00FFFF]">
 									{header('courses')}
 								</Link>
+								<Link href="/experiencia" className="text-lg hover:text-[#00FFFF]">
+									{header('experience')}
+								</Link>
 								<Link href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="text-lg hover:text-[#00FFFF]">
-									{header('plans')}
+									{header('cometa')}
 								</Link>
-								<Link href="https://wa.me/5491156633437" className="text-lg hover:text-[#00FFFF]">
-									{header('assistance')}
+								<Link href="/tutores" className="text-lg hover:text-[#00FFFF]">
+									{header('tutorship')}
 								</Link>
-								<Link href="https://upexqa.slack.com" className="text-lg hover:text-[#00FFFF]">
-									{header('community')}
+								<Link href="/sprints" className="text-lg hover:text-[#00FFFF]">
+									SPRINT-CALENDAR
 								</Link>
 							</nav>
 							<div className="mt-4">

@@ -2,7 +2,6 @@
 
 import { localeNames, locales, usePathname, useRouter, type Locale } from '@/i18n.config';
 import { Globe, ChevronDown } from 'lucide-react';
-// import { Button } from '@/components/ui/button-select';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 export default function LocaleSwitcher({ locale, isMobile }: { locale: Locale; isMobile: boolean }) {

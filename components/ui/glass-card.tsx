@@ -5,6 +5,7 @@ import type { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n.config';
+import React from 'react';
 
 export function GlassCards() {
 	return (
@@ -59,13 +60,22 @@ export function GlassCard({ glowColor, title, description, icon, reactIcon, butt
 		<div className={'relative overflow-hidden rounded-2xl p-[2px] transition-all duration-300 hover:scale-105 group'}>
 			<div className={`absolute inset-0 bg-gradient-to-br ${glowColor} opacity-75 group-hover:opacity-100 blur-md transition-opacity duration-300`}></div>
 			<div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 animate-gradient"></div>
-			<div className="relative h-full rounded-2xl bg-gradient-to-br from-blue-900/80 to-purple-900/80 p-6 backdrop-blur-xl backdrop-filter">
+			<div className="relative h-full rounded-2xl bg-gradient-to-br from-blue-900/80 to-purple-900/80 p-6 backdrop-blur-xl backdrop-filter flex flex-col">
 				<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"></div>
-				<div className="relative z-10">
+				<div className="relative z-10 flex-grow">
 					<CustomImage icon={icon} ReactIcon={reactIcon} />
 					<h2 className="mt-4 text-2xl font-semibold text-white text-center">{title}</h2>
-					<p className="mt-2 text-sm text-blue-200">{description}</p>
-					<div className="flex justify-center">
+					<p className="mt-2 text-sm text-blue-200 text-left">
+						{description.split('\\n').map((line, index) => (
+							<React.Fragment key={index}>
+								{line}
+								<br />
+							</React.Fragment>
+						))}
+					</p>
+				</div>
+				<div className="relative z-10 flex-grow">
+					<div className="mt-auto flex justify-center">
 						<WithLink linkTo={linkTo} buttonText={buttonText} />
 					</div>
 				</div>
