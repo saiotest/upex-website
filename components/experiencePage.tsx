@@ -67,7 +67,7 @@ export function ExperiencePageComponent() {
 
 				<Button className="w-full bg-[#1a1a4a] hover:bg-[#2a2a5a] text-[#00ffff] border border-[#00ffff]">
 					<ChevronLeft className="mr-2 h-4 w-4" />
-					<Link href="#">Volver al Inicio</Link>
+					<Link href="/">Volver al Inicio</Link>
 				</Button>
 				<WhatsAppButton />
 			</main>
@@ -175,7 +175,6 @@ function OtherServiceCard({ icon, title, description, buttonText, linkTo, newTab
 					<Link href={linkTo} {...newTabProps}>
 						{buttonText}
 					</Link>
-					{/* <span>{buttonText}</span> */}
 				</Button>
 			</CardContent>
 		</Card>

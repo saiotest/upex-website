@@ -18,14 +18,16 @@ import WhatsAppButton from './whatsapp-button';
 import Quotes from './quotes';
 import { YoutubeShort } from './ui/videoshort';
 import CommunitySocialMedia from './communitySection';
+import AnimatedTestimonials from './testimonialsSection';
 
 export function Homepage() {
 	const hero = useTranslations('hero');
 	const serv = useTranslations('services');
-	const ben = useTranslations('benefits');
-	const com = useTranslations('community');
 	const imp = useTranslations('impact');
 	const join = useTranslations('join');
+	const gotoSection = (sectionId: string) => {
+		return document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+	};
 
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-[#020B2D] via-[##0A3A7E] to-[#0F5ABE] text-white">
@@ -60,7 +62,6 @@ export function Homepage() {
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											{/* <Slack className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
 											<Image src="/slack_icon.svg" alt="Slack" width={32} height={32} className="w-14 h-14 mb-0" />
 											<span className="text-xs">Slack</span>
 										</div>
@@ -72,7 +73,6 @@ export function Homepage() {
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											{/* <CheckSquare className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
 											<Image src="/jira_icon.svg" alt="Jira" width={32} height={32} className="w-14 h-14 mb-0" />
 											<span className="text-xs">Jira</span>
 										</div>
@@ -81,17 +81,6 @@ export function Homepage() {
 										<p>{hero('tooltips.jira')}</p>
 									</TooltipContent>
 								</Tooltip>
-								{/* <Tooltip>
-									<TooltipTrigger>
-										<div className="flex flex-col items-center">
-											<Code className="w-8 h-8 mb-2 text-[#00FFFF]" />
-											<span className="text-xs">XRay</span>
-										</div>
-									</TooltipTrigger>
-									<TooltipContent>
-										<p>{hero('tooltips.xray')}</p>
-									</TooltipContent>
-								</Tooltip> */}
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
@@ -209,7 +198,7 @@ export function Homepage() {
 					</div>
 					{/* ---- CARDS (SERVICES) ---- */}
 					<div className="container mx-auto mb-40">
-						<h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{serv('title')}</h2>
+						<h2 className="text-4xl md:text-6xl mb-8 font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#04f5f9] via-[#cea4ff] to-[#da45ff]">{serv('title')}</h2>
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 							<GlassCard reactIcon={RocketIcon} title={serv('cards.sandbox.title')} description={serv('cards.sandbox.description')} buttonText={serv('cards.sandbox.link')} linkTo="https://forms.gle/ke4kadCJWRrDkDTXA" glowColor="from-cyan-300 to-blue-600" />
 							<GlassCard reactIcon={Book} title={serv('cards.blackhole.title')} description={serv('cards.blackhole.description')} buttonText={serv('cards.blackhole.link')} linkTo="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" glowColor="from-cyan-300 to-blue-600" />
@@ -251,7 +240,7 @@ export function Homepage() {
 							</div>
 						</div>
 					</section>
-					<section className="mb-20 h-full rounded-2xl bg-gradient-to-br from-blue-900/80 to-purple-900/80 p-6 backdrop-blur-xl backdrop-filter flex flex-col">
+					<section className="mb-1 h-full rounded-2xl bg-gradient-to-br from-blue-900/80 to-purple-900/80 p-6 backdrop-blur-xl backdrop-filter flex flex-col">
 						<div className="flex flex-col md:flex-row-reverse items-center justify-center">
 							<div className="md:w-2/4 p-8 max-w-2xl w-full">
 								<h2 className="text-4xl font-bold mb-4 flex items-center justify-center text-[#00FFFF]">CURSOS de Inserción Laboral</h2>
@@ -274,33 +263,33 @@ export function Homepage() {
 								<YoutubeShort videoSource="q1O7ocU2QeA" title="Cursos de Testing!" />
 							</div>
 							<div className="md:w-1/4 p-2 max-w-md">
-								<Image src="/cursos-blackhole.png" alt="UPEX Blackhole Info" width={1080} height={1080} className="object-cover w-full h-full" />
+								<Image src="/cursos-blackhole.png" alt="UPEX Blackhole Info" width={1080} height={1080} className="object-cover w-full h-full rounded-3xl border-4 border-white" />
 							</div>
 						</div>
 					</section>
-					{/** SECTION: TESTIMONIALS */}
-					<section className="mb-20 h-full rounded-2xl bg-gradient-to-br from-blue-900/80 to-purple-900/80 p-6 backdrop-blur-xl backdrop-filter flex flex-col">
-						<CommunitySocialMedia />
-					</section>
 
-					{/* <div className="bg-[#1A2C5A] p-6 md:p-8 rounded-lg mb-20">
-						<h3 className="text-2xl font-bold mb-4 text-white text-center">{com('title')}</h3>
-						<p className="mb-6 text-white text-center">{com('description')}</p>
-						<div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-							<a href="https://join.slack.com/t/upexqa/shared_invite/zt-2p2lxo03o-DeBuiJNRqlSKAID~XdxE2Q" target="_blank" rel="noopener noreferrer">
-								<Button className="bg-[#4A154B] hover:bg-[#3A0F3B]">
-									<Slack className="mr-2" />
-									{com('join-slack')}
-								</Button>
-							</a>
-							<a href="https://discord.gg/aCC6t4Ut9k" target="_blank" rel="noopener noreferrer">
-								<Button className="bg-[#7289DA] hover:bg-[#5269BA]">
-									<MessageCircle className="mr-2" />
-									{com('join-discord')}
-								</Button>
-							</a>
+					{/** SECTION: TESTIMONIALS */}
+					<div className="container mx-auto mt-20 flex flex-col items-center justify-center">
+						<h1 className="text-4xl mt-20 md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#04f5f9] via-[#cea4ff] to-[#da45ff]">TESTIMONIOS</h1>
+						<div className="container max-w-6xl flex items-center justify-center">
+							<div className="flex flex-col md:flex-row items-center">
+								<div className="md:w-1/3 p-8">
+									<YoutubeShort videoSource="-qFfi6ixTAY" title="Lo que dicen de UPEX!" />
+								</div>
+								<div className="md:w-2/3 p-8">
+									<AnimatedTestimonials />
+									<div className="mt-auto flex justify-center">
+										<Link href="/testimonios" rel="noopener noreferrer" passHref>
+											<Button className="h-auto mt-4 bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white text-xl py-2 px-10 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg max-w-xs md:max-w-md break-words whitespace-normal">
+												<span className="mr-2">VER MÁS TESTIMONIOS!</span>
+											</Button>
+										</Link>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div> */}
+					</div>
+					<CommunitySocialMedia />
 				</section>
 
 				<motion.div className="bg-gradient-to-r from-[#020B2D] to-[#8f26e0] rounded-lg p-12 text-center" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>

@@ -173,7 +173,7 @@ export function SprintCalendarPage() {
 		<div className="min-h-screen bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] text-white flex flex-col">
 			<Header />
 			<main className="relative">
-				<div className="max-w-6xl mx-auto text-center space-y-6 mt-20 flex flex-col  items-center">
+				<div className="max-w-6xl mx-auto text-center space-y-6 mt-20 flex flex-col items-center">
 					<h1 className="p-2 text-4xl md:text-5xl lg:text-7xl font-bold mb-1 mt-12 bg-clip-text text-transparent bg-gradient-to-r from-[#eaff00] via-[#01fff2] to-[#ff79eb]">Galaxy Sprint Calendar</h1>
 					<Legend />
 					<div ref={containerRef} className="relative w-full max-w-lg overflow-y-auto" style={{ height: 'calc(100vh - 250px)' }}>

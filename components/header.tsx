@@ -40,29 +40,38 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 					<ul className="flex space-x-4 md:space-x-6">
 						<li>
 							{/** Go to UPEX Blackhole with /cursos Page */}
-							<Link target="_blank" href="/cursos" className="hover:text-[#00FFFF]">
+							<Link href="/cursos" className="hover:text-[#00FFFF]">
 								{header('courses')}
 							</Link>
 						</li>
 						<li>
 							{/** Go to UPEX Galaxy with /experiencia Page */}
-							<Link target="_blank" href="/experiencia" className="hover:text-[#00FFFF]">
+							<Link href="/experiencia" className="hover:text-[#00FFFF]">
 								{header('experience')}
 							</Link>
 						</li>
 						<li>
+							{/** Go to Cometa Documentation in Confluence */}
 							<Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="hover:text-[#00FFFF]">
 								{header('cometa')}
 							</Link>
 						</li>
 						<li>
-							<Link target="_blank" href="/tutores" className="hover:text-[#00FFFF]">
+							{/** Go to Tutorship Page */}
+							<Link href="/tutores" className="hover:text-[#00FFFF]">
 								{header('tutorship')}
 							</Link>
 						</li>
 						<li>
-							<Link target="_blank" href="https://upexqa.slack.com" className="hover:text-[#00FFFF]">
+							{/** Go to Social Media Page */}
+							<Link href="/community" className="hover:text-[#00FFFF]">
 								{header('community')}
+							</Link>
+						</li>
+						<li>
+							{/** Go to Testimonios Page */}
+							<Link href="/testimonios" className="hover:text-[#00FFFF]">
+								{header('testimony')}
 							</Link>
 						</li>
 						<li>
@@ -117,6 +126,9 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 								</Link>
 								<Link href="/tutores" className="text-lg hover:text-[#00FFFF]">
 									{header('tutorship')}
+								</Link>
+								<Link href="/community" className="text-lg hover:text-[#00FFFF]">
+									{header('community')}
 								</Link>
 								<Link href="/sprints" className="text-lg hover:text-[#00FFFF]">
 									SPRINT-CALENDAR
