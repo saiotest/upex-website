@@ -17,7 +17,7 @@ const codeFont = localFont({
 
 export const metadata: Metadata = {
 	title: 'UPEX - El Espacio de Trabajo Perfecto para Software Testing (QA)',
-	description: 'Descubre UPEX, la plataforma integral para el aprendizaje y práctica de Testers QA (Manuales y Automatización de Pruebas) en un entorno real y simulado. Accede a Cursos, Experiencia laboral práctica y Tutoría personalizada para convertirte en el tester que buscan las empresas. Únete a miles de testers ya capacitados en UPEX.'
+	description: 'La plataforma integral para el aprendizaje y práctica de Testers QA (Manual y Automation) en un entorno real y simulado. Accede a Cursos, Experiencia laboral práctica y Tutoría personalizada para convertirte en el tester que buscan las empresas. Únete a miles de testers ya capacitados en UPEX.'
 };
 
 export default async function RootLayout({

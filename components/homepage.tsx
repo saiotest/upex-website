@@ -139,7 +139,7 @@ export function Homepage() {
 									{hero('tryWorkspaceFree')}
 								</Button>
 							</Link> */}
-							<Link href="/start" target="_blank" rel="noopener noreferrer" passHref>
+							<Link href="/start" title="Start Exploring UPEX Galaxy" target="_blank" rel="noopener noreferrer" passHref>
 								<PressStartButton />
 							</Link>
 						</div>
@@ -220,7 +220,7 @@ export function Homepage() {
 								</ul>
 								<Image src="/jira_galaxy.png" alt="UPEX Galaxy Dashboard" title="UPEX Galaxy Jira" width={1920} height={1080} className="object-cover w-full h-full" />
 								<div className="mt-auto flex flex-col items-center justify-center w-full">
-									<Link href="/start" target="_blank" rel="noopener noreferrer" passHref>
+									<Link href="/start" title="Start Exploring UPEX Galaxy" target="_blank" rel="noopener noreferrer" passHref>
 										<Button className="mt-4 bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white text-xl py-6 px-10 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg max-w-xs md:max-w-md">
 											<span className="mr-2">UNIRSE A UPEX GALAXY!</span>
 										</Button>
@@ -295,7 +295,7 @@ export function Homepage() {
 				<motion.div className="bg-gradient-to-r from-[#020B2D] to-[#8f26e0] rounded-lg p-12 text-center" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
 					<h2 className="text-4xl font-bold mb-4">{join('title')}</h2>
 					<p className="text-xl mb-8">{join('description')}</p>
-					<Link href="/start" target="_blank" rel="noopener noreferrer" passHref>
+					<Link href="/start" title="Start Exploring UPEX Galaxy" target="_blank" rel="noopener noreferrer" passHref>
 						<PressStartButton />
 					</Link>
 				</motion.div>

@@ -43,13 +43,13 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 					<ul className="flex space-x-4 md:space-x-6">
 						<li>
 							{/** Go to UPEX Blackhole with /cursos Page */}
-							<Link href="/cursos" className="hover:text-[#00FFFF]">
+							<Link href="/cursos" title="Cursos UPEX Blackhole" className="hover:text-[#00FFFF]">
 								{header('courses')}
 							</Link>
 						</li>
 						<li>
 							{/** Go to UPEX Galaxy with /experiencia Page */}
-							<Link href="/experiencia" className="hover:text-[#00FFFF]">
+							<Link href="/experiencia" title="Experiencia Sprints" className="hover:text-[#00FFFF]">
 								{header('experience')}
 							</Link>
 						</li>
@@ -61,24 +61,24 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 						{/* </li> */}
 						<li>
 							{/** Go to Tutorship Page */}
-							<Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/external/MTZlNGRhYWFlNzI0NDVjZGE3ZDc5ZWY2OTkwNGI5YWE" className="hover:text-[#00FFFF]">
+							<Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/external/MTZlNGRhYWFlNzI0NDVjZGE3ZDc5ZWY2OTkwNGI5YWE" title="Tutorías" className="hover:text-[#00FFFF]">
 								{header('tutorship')}
 							</Link>
 						</li>
 						<li>
 							{/** Go to Social Media Page */}
-							<Link href="/community" className="hover:text-[#00FFFF]">
+							<Link href="/community" title="Social Media" className="hover:text-[#00FFFF]">
 								{header('community')}
 							</Link>
 						</li>
 						<li>
 							{/** Go to Testimonios Page */}
-							<Link href="/testimonios" className="hover:text-[#00FFFF]">
+							<Link href="/testimonios" title="Testimonials" className="hover:text-[#00FFFF]">
 								{header('testimony')}
 							</Link>
 						</li>
 						<li>
-							<Link href="/sprints-calendar" className="hover:text-[#00FFFF]">
+							<Link href="/sprints-calendar" title="Calendario de Sprint" className="hover:text-[#00FFFF]">
 								SPRINT-CALENDAR
 							</Link>
 						</li>
@@ -121,25 +121,25 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 								<SheetTitle className="text-[#00ffff]">Menu</SheetTitle>
 							</SheetHeader>
 							<nav className="flex flex-col space-y-4 mt-8">
-								<Link href="/cursos" className="text-lg hover:text-[#00FFFF]">
+								<Link href="/cursos" title="Cursos UPEX Blackhole" className="text-lg hover:text-[#00FFFF]">
 									{header('courses')}
 								</Link>
-								<Link href="/experiencia" className="text-lg hover:text-[#00FFFF]">
+								<Link href="/experiencia" title="Experiencia Sprints" className="text-lg hover:text-[#00FFFF]">
 									{header('experience')}
 								</Link>
 								{/* <Link href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="text-lg hover:text-[#00FFFF]">
 									{header('cometa')}
 								</Link> */}
-								<Link href="https://upex.docu.upexgalaxy.com/wiki/external/MTZlNGRhYWFlNzI0NDVjZGE3ZDc5ZWY2OTkwNGI5YWE" className="text-lg hover:text-[#00FFFF]">
+								<Link href="https://upex.docu.upexgalaxy.com/wiki/external/MTZlNGRhYWFlNzI0NDVjZGE3ZDc5ZWY2OTkwNGI5YWE" title="Tutorías" className="text-lg hover:text-[#00FFFF]">
 									{header('tutorship')}
 								</Link>
-								<Link href="/community" className="text-lg hover:text-[#00FFFF]">
+								<Link href="/community" title="Social Media" className="text-lg hover:text-[#00FFFF]">
 									{header('community')}
 								</Link>
-								<Link href="/testimonios" className="text-lg hover:text-[#00FFFF]">
+								<Link href="/testimonios" title="Testimonios" className="text-lg hover:text-[#00FFFF]">
 									{header('testimony')}
 								</Link>
-								<Link href="/sprints-calendar" className="text-lg hover:text-[#00FFFF]">
+								<Link href="/sprints-calendar" title="Sprint Calendar" className="text-lg hover:text-[#00FFFF]">
 									SPRINT-CALENDAR
 								</Link>
 							</nav>

@@ -79,7 +79,7 @@ export default function CommunitySocialMedia() {
 				</CardHeader>
 				<CardContent className="flex justify-center items-center relative">
 					<div className="absolute inset-0">
-						<Image src="/universe_wallpaper.jpg" alt="UPEX" layout="fill" objectFit="cover" className="z-0 rounded-full border-4 border-white" />
+						<Image src="/universe_wallpaper.jpg" alt="UPEX" title="UPEX Community Universe" layout="fill" objectFit="cover" className="z-0 rounded-full border-4 border-white" />
 					</div>
 
 					<div className="w-full h-[300px] md:h-[400px] relative">
@@ -97,7 +97,7 @@ export default function CommunitySocialMedia() {
 											left: `${43 + 40 * Math.cos((index * 2 * Math.PI) / planets.length)}%`
 										}}
 										onClick={() => setSelectedPlanet(planet)}>
-										<Image src={planet.bgImage} alt={planet.name} layout="fill" objectFit="cover" className="rounded-full" />
+										<Image src={planet.bgImage} alt={planet.name} title={planet.name} layout="fill" objectFit="cover" className="rounded-full" />
 										<div className="absolute inset-0 flex items-center justify-center rounded-full">{planet.icon}</div>
 									</Button>
 								</DialogTrigger>
