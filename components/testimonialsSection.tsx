@@ -13,16 +13,16 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
 	{
-		name: 'Elyer Maldonado',
-		role: 'QA SDET',
-		avatar: '/saitest_profile.png',
-		quote: 'Testing is an infinite process of comparing the invisible to the ambiguous in order to avoid the unthinkable happening to the anonymous.'
+		name: 'Carlos Gauto (CharlyAutomatiza)',
+		role: 'Project Leader @ Mercado Libre',
+		avatar: '/testimonios/charlyAutomatiza.jpeg',
+		quote: 'El impacto positivo de UPEX en la comunidad es destacable, han logrado ayudar y acompañar en el aprendizaje a muchas personas. Tanto si estás dando tus primeros pasos en IT, si estás buscando re-convertir tu carrera o incluso si contás con experiencia pero buscás un salto de calidad, UPEX será el lugar que te permitirá exprimir tu potencial y llegar al siguiente nivel.'
 	},
 	{
-		name: 'Gregorio',
-		role: 'QA Lead',
-		avatar: '/saitest_profile.png',
-		quote: 'La calidad no es un acto, es un hábito. En UPEX, te ayudamos a desarrollar esos hábitos para que puedas sobresalir en tu carrera.'
+		name: 'John Osorio (JohnPerformance)',
+		role: 'Performance Test Manager',
+		avatar: '/testimonios/performance360.jpeg',
+		quote: 'Being part of this testing community is a truly transformative experience. You will find surrounded by professionals who not only shared their knowledge but also provide the chance to practice and work with trending tools that are essential in today’s market. Here, theory comes to life: in every real-world project.'
 	}
 	// Add more testimonials here...
 ];

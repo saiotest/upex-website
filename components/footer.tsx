@@ -10,7 +10,7 @@ export default function Footer({ hidden }: { hidden?: boolean }) {
 			<div className="container mx-auto text-center">
 				<p className="mb-4 text-white">{footer('description')}</p>
 				<div className="flex flex-wrap justify-center space-x-4">
-					<Link href="https://upex.docu.upexgalaxy.com/wiki/x/IgD1C" target="_blank" className="text-white hover:text-[#00FFFF] mb-2">
+					<Link href="https://upex.docu.upexgalaxy.com/wiki/external/NGM4MmRlNDQ3ZmU2NGIxNThjYzZjZWNiMWNkZjJhNzI" target="_blank" className="text-white hover:text-[#00FFFF] mb-2">
 						{footer('aboutUs')}
 					</Link>
 					{/* <Link href="#" className="text-white hover:text-[#00FFFF] mb-2">{footer("contact")}</Link> */}

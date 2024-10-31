@@ -22,8 +22,11 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
-	const handleLoginClick = () => {
+	const handleJiraClick = () => {
 		window.open('https://jira.upexgalaxy.com/', '_blank', 'noopener,noreferrer');
+	};
+	const handleConfluenceClick = () => {
+		window.open('https://docu.upexgalaxy.com/', '_blank', 'noopener,noreferrer');
 	};
 
 	const Header = (
@@ -50,15 +53,15 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 								{header('experience')}
 							</Link>
 						</li>
-						<li>
-							{/** Go to Cometa Documentation in Confluence */}
-							<Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="hover:text-[#00FFFF]">
+						{/* <li> */}
+						{/** Go to Cometa Documentation in Confluence */}
+						{/* <Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="hover:text-[#00FFFF]">
 								{header('cometa')}
-							</Link>
-						</li>
+							</Link> */}
+						{/* </li> */}
 						<li>
 							{/** Go to Tutorship Page */}
-							<Link href="/tutores" className="hover:text-[#00FFFF]">
+							<Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/external/MTZlNGRhYWFlNzI0NDVjZGE3ZDc5ZWY2OTkwNGI5YWE" className="hover:text-[#00FFFF]">
 								{header('tutorship')}
 							</Link>
 						</li>
@@ -75,7 +78,7 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 							</Link>
 						</li>
 						<li>
-							<Link target="_blank" href="/sprints" className="hover:text-[#00FFFF]">
+							<Link href="/sprints-calendar" className="hover:text-[#00FFFF]">
 								SPRINT-CALENDAR
 							</Link>
 						</li>
@@ -99,8 +102,11 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 					{/* <Button onClick={handleLoginClick} variant="outline" className="hidden md:inline-flex bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">
 						Jira
 					</Button> */}
-					<Button onClick={handleLoginClick} variant="outline" className="hidden md:inline-flex bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white rounded-full">
-						<span>Jira Workspace</span>
+					<Button onClick={handleConfluenceClick} variant="outline" className="font-bold hidden md:inline-flex bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white rounded-full">
+						<span>UPEX DOCU</span>
+					</Button>
+					<Button onClick={handleJiraClick} variant="outline" className="font-bold hidden md:inline-flex bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white rounded-full">
+						<span>JIRA WORKSPACE</span>
 					</Button>
 					{/** ----- MOBILE MENU ----- */}
 					<Sheet>
@@ -121,16 +127,19 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 								<Link href="/experiencia" className="text-lg hover:text-[#00FFFF]">
 									{header('experience')}
 								</Link>
-								<Link href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="text-lg hover:text-[#00FFFF]">
+								{/* <Link href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="text-lg hover:text-[#00FFFF]">
 									{header('cometa')}
-								</Link>
-								<Link href="/tutores" className="text-lg hover:text-[#00FFFF]">
+								</Link> */}
+								<Link href="https://upex.docu.upexgalaxy.com/wiki/external/MTZlNGRhYWFlNzI0NDVjZGE3ZDc5ZWY2OTkwNGI5YWE" className="text-lg hover:text-[#00FFFF]">
 									{header('tutorship')}
 								</Link>
 								<Link href="/community" className="text-lg hover:text-[#00FFFF]">
 									{header('community')}
 								</Link>
-								<Link href="/sprints" className="text-lg hover:text-[#00FFFF]">
+								<Link href="/testimonios" className="text-lg hover:text-[#00FFFF]">
+									{header('testimony')}
+								</Link>
+								<Link href="/sprints-calendar" className="text-lg hover:text-[#00FFFF]">
 									SPRINT-CALENDAR
 								</Link>
 							</nav>
@@ -138,8 +147,11 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 								<h3 className="text-[#00ffff] mb-2">Idioma</h3>
 								<LocaleSwitcher locale={locale} isMobile={true} />
 							</div>
-							<Button onClick={handleLoginClick} className="mt-4 bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">
-								Login
+							<Button onClick={handleConfluenceClick} className="mt-4 bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] font-bold">
+								UPEX DOCU
+							</Button>
+							<Button onClick={handleJiraClick} className="mt-4 bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] font-bold">
+								JIRA WORKSPACE
 							</Button>
 						</SheetContent>
 					</Sheet>

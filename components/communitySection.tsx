@@ -61,7 +61,7 @@ const planets: PlanetInfo[] = [
 		name: 'WhatsApp',
 		icon: <Image src="/icon-whatsapp.png" alt="Slack" width={300} height={300} className="w-12 h-12 mb-0" />,
 		description: 'Comunidad abierta con múltiples chats por especialidades. Fácil acceso para consultas, noticias de empleo y discusiones sobre testing.',
-		link: '#', // Replace with actual WhatsApp group invite link
+		link: 'https://chat.whatsapp.com/H1kpOKazMj0CVLXuZTOnud',
 		linkText: 'Unirse a WhatsApp',
 		bgImage: '/planet-whatsapp.png'
 	}

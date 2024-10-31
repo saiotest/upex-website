@@ -32,7 +32,7 @@ export function Homepage() {
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-[#020B2D] via-[##0A3A7E] to-[#0F5ABE] text-white">
 			<Header />
-			<main>
+			<main className="relative flex-grow">
 				{/**---- SECTION: HERO BANNER ----*/}
 				<section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] py-20 px-4">
 					<div className="text-center mx-auto">
@@ -201,8 +201,8 @@ export function Homepage() {
 						<h2 className="text-4xl md:text-6xl mb-8 font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#04f5f9] via-[#cea4ff] to-[#da45ff]">{serv('title')}</h2>
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 							<GlassCard reactIcon={RocketIcon} title={serv('cards.sandbox.title')} description={serv('cards.sandbox.description')} buttonText={serv('cards.sandbox.link')} linkTo="https://forms.gle/ke4kadCJWRrDkDTXA" glowColor="from-cyan-300 to-blue-600" />
-							<GlassCard reactIcon={Book} title={serv('cards.blackhole.title')} description={serv('cards.blackhole.description')} buttonText={serv('cards.blackhole.link')} linkTo="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" glowColor="from-cyan-300 to-blue-600" />
-							<GlassCard reactIcon={Castle} title={serv('cards.galaxy.title')} description={serv('cards.galaxy.description')} buttonText={serv('cards.galaxy.link')} linkTo="https://upex.docu.upexgalaxy.com/wiki/x/L4YF" glowColor="from-cyan-300 to-blue-600" />
+							<GlassCard reactIcon={Book} title={serv('cards.blackhole.title')} description={serv('cards.blackhole.description')} buttonText={serv('cards.blackhole.link')} linkTo="/cursos" glowColor="from-cyan-300 to-blue-600" />
+							<GlassCard reactIcon={Castle} title={serv('cards.galaxy.title')} description={serv('cards.galaxy.description')} buttonText={serv('cards.galaxy.link')} linkTo="/experience" glowColor="from-cyan-300 to-blue-600" />
 							<GlassCard reactIcon={Satellite} title={serv('cards.satellite.title')} description={serv('cards.satellite.description')} buttonText={serv('cards.satellite.link')} linkTo="#" glowColor="from-cyan-300 to-blue-600" />
 						</div>
 					</div>
@@ -225,7 +225,7 @@ export function Homepage() {
 											<span className="mr-2">UNIRSE A UPEX GALAXY!</span>
 										</Button>
 									</Link>
-									<Link href="/start" target="_blank" rel="noopener noreferrer" passHref>
+									<Link href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener noreferrer" passHref>
 										<Button className="h-auto mt-2 text-white text-xl py-1 px-4 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg max-w-xs md:max-w-md break-words whitespace-normal">
 											<span className="mr-2">PROBAR GRATIS versión SANDBOX</span>
 										</Button>
@@ -252,7 +252,7 @@ export function Homepage() {
 									<li>Certificaciones reconocidas por la industria.</li>
 								</ul>
 								<div className="mt-auto flex justify-center">
-									<Link href="/start" target="_blank" rel="noopener noreferrer" passHref>
+									<Link href="/cursos" rel="noopener noreferrer" passHref>
 										<Button className="h-auto mt-4 bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white text-xl py-2 px-10 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg max-w-xs md:max-w-md break-words whitespace-normal">
 											<span className="mr-2">VER CURSOS DE UPEX BLACKHOLE!</span>
 										</Button>
@@ -270,23 +270,23 @@ export function Homepage() {
 
 					{/** SECTION: TESTIMONIALS */}
 					<div className="container mx-auto mt-20 flex flex-col items-center justify-center">
-						<h1 className="text-4xl mt-20 md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#04f5f9] via-[#cea4ff] to-[#da45ff]">TESTIMONIOS</h1>
-						<div className="container max-w-6xl flex items-center justify-center">
+						<h1 className="text-4xl mt-20 mb-10 md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#04f5f9] via-[#cea4ff] to-[#da45ff]">TESTIMONIOS</h1>
+						<div className="container max-w-7xl flex items-center justify-center">
 							<div className="flex flex-col md:flex-row items-center">
-								<div className="md:w-1/3 p-8">
-									<YoutubeShort videoSource="-qFfi6ixTAY" title="Lo que dicen de UPEX!" />
+								<div className="md:w-2/6 p-8">
+									<YoutubeShort videoSource="aLkZ8MCLc3A" title="Lo que dicen de UPEX!" />
 								</div>
-								<div className="md:w-2/3 p-8">
+								<div className="md:w-4/6 p-8">
 									<AnimatedTestimonials />
-									<div className="mt-auto flex justify-center">
-										<Link href="/testimonios" rel="noopener noreferrer" passHref>
-											<Button className="h-auto mt-4 bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white text-xl py-2 px-10 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg max-w-xs md:max-w-md break-words whitespace-normal">
-												<span className="mr-2">VER MÁS TESTIMONIOS!</span>
-											</Button>
-										</Link>
-									</div>
 								</div>
 							</div>
+						</div>
+						<div className="mt-auto flex justify-center">
+							<Link href="/testimonios" rel="noopener noreferrer" passHref>
+								<Button className="h-auto mt-4 bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white text-xl py-2 px-10 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg max-w-xs md:max-w-md break-words whitespace-normal">
+									<span className="mr-2">VER MÁS TESTIMONIOS!</span>
+								</Button>
+							</Link>
 						</div>
 					</div>
 					<CommunitySocialMedia />

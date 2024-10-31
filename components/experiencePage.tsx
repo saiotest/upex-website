@@ -12,10 +12,10 @@ import WhatsAppButton from './whatsapp-button';
 
 export function ExperiencePageComponent() {
 	return (
-		<div className="min-h-screen bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] text-white">
+		<div className="min-h-screen bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] text-white flex flex-col">
 			<Header />
 			<HeroBanner />
-			<main id="suscripcion-upex-galaxy" className="max-w-4xl mx-auto space-y-12 p-6 md:p-12">
+			<main id="suscripcion-upex-galaxy" className="max-w-6xl mx-auto space-y-12 p-6 md:p-12">
 				<section className="text-center space-y-4">
 					<h1 className="text-4xl  md:text-6xl font-bold bg-gradient-to-r from-[#00ffff] via-[#ff00ff] to-[#8a2be2] text-transparent bg-clip-text mt-20 mb-15 p-2 md:whitespace-nowrap">Suscripción Galaxy</h1>
 				</section>
@@ -42,7 +42,7 @@ export function ExperiencePageComponent() {
 				<section className="space-y-6">
 					<h2 className="text-3xl font-bold text-center text-[#ffd549]">¿Es tu PRIMERA SUBSCRIPCIÓN?</h2>
 					<div className="grid md:grid-cols-2 gap-6">
-						<SubscriptionCard emoji="🥹" title="¡Sí! primera vez" description="Si es tu primera vez, tienes REGISTRO GRATIS a la Galaxia! 🚀" buttonText="REGISTRARSE y SUSCRIBIRSE →" linkTo="https://upexgalaxy.zapier.app/register" />
+						<SubscriptionCard emoji="🥹" title="¡Sí! primera vez" description="Si es tu primera vez, tienes REGISTRO GRATIS a la Galaxia! 🚀" buttonText="REGISTRARSE y SUSCRIBIRSE →" linkTo="https://upexgalaxy.zapier.app/subscribe-sprints" />
 						<SubscriptionCard emoji="😎" title="Ya estoy en UPEX Galaxy" description="Si ya eres parte de la Galaxia, Bienvenido de vuelta, Crack!⭐" buttonText="SUSCRIBIRSE DE VUELTA →" linkTo="https://upexgalaxy.zapier.app/subscribe-sprints" />
 					</div>
 				</section>
@@ -60,8 +60,8 @@ export function ExperiencePageComponent() {
 				<section className="space-y-6">
 					<p className="text-lg text-center text-[#afd2ff] italic">¡Prepárate para despegar hacia el conocimiento! 🚀 Haz clic en los siguientes servicios estelares y serás teletransportado a formularios intergalácticos. ¡No te preocupes, no necesitas traje espacial!</p>
 					<div className="grid md:grid-cols-2 gap-6">
-						<OtherServiceCard icon={<Book className="w-12 h-12 text-[#00ffff]" />} title="CURSOS BLACKHOLE" description="Cursos QA COMPLETOS y listos para ti, desde lo básico hasta lo avanzado. Aprende a tu ritmo." buttonText="Explorar Cursos →" linkTo="#" />
-						<OtherServiceCard icon={<Users className="w-12 h-12 text-[#00ffff]" />} title="TUTOR PRIVADO" description="Mentoría o Asesoría QA EXCLUSIVA 1:1 para guiarte y ayudarte en tus asignaciones en el Sprint." buttonText="Consigue tu tutor personal →" linkTo="#" />
+						<OtherServiceCard icon={<Book className="w-12 h-12 text-[#00ffff]" />} title="CURSOS BLACKHOLE" description="Cursos QA COMPLETOS y listos para ti, desde lo básico hasta lo avanzado. Aprende a tu ritmo." buttonText="Explorar Cursos →" linkTo="/cursos" />
+						<OtherServiceCard icon={<Users className="w-12 h-12 text-[#00ffff]" />} title="TUTOR PRIVADO" description="Mentoría o Asesoría QA EXCLUSIVA 1:1 para guiarte y ayudarte en tus asignaciones en el Sprint." buttonText="Consigue tu tutor personal →" linkTo="https://upex.docu.upexgalaxy.com/wiki/external/MTZlNGRhYWFlNzI0NDVjZGE3ZDc5ZWY2OTkwNGI5YWE" />
 					</div>
 				</section>
 
@@ -118,9 +118,11 @@ function HeroBanner() {
 						<Button onClick={() => gotoSection('suscripcion-upex-galaxy')} className="bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white text-xl py-6 px-10 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg">
 							<span className="mr-2">¡ÚNETE A LA GALAXIA AHORA!</span>
 						</Button>
-						<Button onClick={() => gotoSection('suscripcion-upex-galaxy')} variant="outline" className="bg-transparent border-2 border-[#ffffff50] hover:text-white text-xl py-6 px-10 rounded-full hover:bg-[#ffffff20] transform hover:scale-105 transition-all duration-300">
-							¿Quieres Probarlo Gratis?
-						</Button>
+						<Link href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener noreferrer">
+							<Button variant="outline" className="bg-transparent border-2 border-[#ffffff50] hover:text-white text-xl py-6 px-10 rounded-full hover:bg-[#ffffff20] transform hover:scale-105 transition-all duration-300">
+								¿Quieres Probarlo Gratis?
+							</Button>
+						</Link>
 					</motion.div>
 				</div>
 			</main>

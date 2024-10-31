@@ -22,8 +22,8 @@ export default function TestimonialWall() {
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] text-white flex flex-col">
 			<Header />
-			<main>
-				<section className="relative flex-grow">
+			<main className="relative flex-grow">
+				<section>
 					<div className="max-w-6xl mx-auto text-center space-y-6 mt-20 flex flex-col items-center">
 						<h1 className="p-2 text-4xl md:text-5xl lg:text-7xl font-bold mb-1 mt-12 bg-clip-text text-transparent bg-gradient-to-r from-[#eaff00] via-[#01fff2] to-[#ff79eb]">Personas que Consiguieron el Éxito con UPEX</h1>
 					</div>
@@ -38,10 +38,10 @@ export default function TestimonialWall() {
 											</div>
 										</div>
 									</DialogTrigger>
-									<DialogContent className="max-w-[95vw] h-[95vh] p-0">
+									<DialogContent className="max-w-[95vw] h-[95vh] p-0 border-none">
 										<Image src={testimonial.image} alt="Testimonio ampliado de estudiante UPEX" fill className="object-contain" quality={100} />
 										<Button onClick={() => setOpenDialog(null)} className="absolute top-2 right-2 p-2 bg-black bg-opacity-50 rounded-full text-white hover:bg-opacity-75 transition-colors">
-											<X size={24} />
+											<X size={50} />
 										</Button>
 									</DialogContent>
 								</Dialog>
