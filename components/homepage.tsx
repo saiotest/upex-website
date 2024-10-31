@@ -260,7 +260,7 @@ export function Homepage() {
 								</div>
 							</div>
 							<div className="md:w-1/4 p-2 max-w-md">
-								<YoutubeShort videoSource="q1O7ocU2QeA" title="Cursos de Testing!" />
+								<YoutubeShort videoSource="AuChXkp6jR8" title="Cursos de Testing!" />
 							</div>
 							<div className="md:w-1/4 p-2 max-w-md">
 								<Image src="/cursos-blackhole.png" alt="UPEX Blackhole Info" width={1080} height={1080} className="object-cover w-full h-full rounded-3xl border-4 border-white" />

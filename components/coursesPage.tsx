@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Header from './header';
 import Footer from './footer';
 import { Link } from '@/i18n.config';
+import { Badge } from '@/components/ui/badge';
 
 const courses = [
 	{ id: 1, title: 'testing-qa-stlc', image: '/cursos/qa_testing_card.png', price: '$50 USD' },
@@ -25,7 +26,12 @@ export function CoursesPage() {
 			<main className="relative flex-grow">
 				<section>
 					<div className="max-w-6xl mx-auto text-center space-y-6 mt-20 flex flex-col items-center">
-						<h1 className="p-2 text-4xl md:text-5xl lg:text-7xl font-bold mb-1 mt-12 bg-clip-text text-transparent bg-gradient-to-r from-[#eaff00] via-[#01fff2] to-[#ff79eb]">Elige el Curso que deseas</h1>
+						<h1 className="p-2 text-4xl md:text-5xl lg:text-7xl font-bold mb-1 mt-12 bg-clip-text text-transparent bg-gradient-to-r from-[#eaff00] via-[#01fff2] to-[#ff79eb]">Elige el Curso que Deseas</h1>
+						<Link href="https://upex.docu.upexgalaxy.com/wiki/external/MzQ3M2I0ODcwYzgxNDI1MGE5NzUzYTNjZTk0NDQ1NDM" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+							<Badge variant="outline" className="text-xl justify-center bg-[#7611d4] hover:bg-[#059315] hover:text-white">
+								Políticas sobre los CURSOS BLACKHOLE de UPEX GALAXY
+							</Badge>
+						</Link>
 					</div>
 					<div className="max-w-7xl mx-auto space-y-12 p-6 md:p-12">
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

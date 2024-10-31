@@ -60,8 +60,8 @@ export function ExperiencePageComponent() {
 				<section className="space-y-6">
 					<p className="text-lg text-center text-[#afd2ff] italic">¡Prepárate para despegar hacia el conocimiento! 🚀 Haz clic en los siguientes servicios estelares y serás teletransportado a formularios intergalácticos. ¡No te preocupes, no necesitas traje espacial!</p>
 					<div className="grid md:grid-cols-2 gap-6">
-						<OtherServiceCard icon={<Book className="w-12 h-12 text-[#00ffff]" />} title="CURSOS BLACKHOLE" description="Cursos QA COMPLETOS y listos para ti, desde lo básico hasta lo avanzado. Aprende a tu ritmo." buttonText="Explorar Cursos →" linkTo="/cursos" />
-						<OtherServiceCard icon={<Users className="w-12 h-12 text-[#00ffff]" />} title="TUTOR PRIVADO" description="Mentoría o Asesoría QA EXCLUSIVA 1:1 para guiarte y ayudarte en tus asignaciones en el Sprint." buttonText="Consigue tu tutor personal →" linkTo="https://upex.docu.upexgalaxy.com/wiki/external/MTZlNGRhYWFlNzI0NDVjZGE3ZDc5ZWY2OTkwNGI5YWE" />
+						<OtherServiceCard icon={<Book className="w-12 h-12 text-[#00ffff]" />} title="CURSOS BLACKHOLE" description="Cursos QA COMPLETOS y listos para ti, desde lo básico hasta lo avanzado. Aprende a tu ritmo." buttonText="Explorar Cursos →" linkTo="https://upexgalaxy.zapier.app/subscribe-courses" />
+						<OtherServiceCard icon={<Users className="w-12 h-12 text-[#00ffff]" />} title="TUTOR PRIVADO" description="Mentoría o Asesoría QA EXCLUSIVA 1:1 para guiarte y ayudarte en tus asignaciones en el Sprint." buttonText="Consigue tu tutor personal →" linkTo="https://upexgalaxy.zapier.app/subscribe-tutorship" />
 					</div>
 				</section>
 
