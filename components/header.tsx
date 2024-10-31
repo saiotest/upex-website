@@ -34,7 +34,7 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 			<div className="container mx-auto px-4 py-4 md:py-6 flex justify-between items-center">
 				{/** LOGO */}
 				<Link href="/" className="flex items-center">
-					<Image src="/logo.png" alt="UPEX Logo" width={720} height={240} className="h-10 w-auto" />
+					<Image src="/logo.png" alt="UPEX Logo" title="UPEX Logo" width={720} height={240} className="h-10 w-auto" />
 					<span className="sr-only">UPEX</span>
 				</Link>
 

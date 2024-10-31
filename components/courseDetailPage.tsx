@@ -53,7 +53,7 @@ export default function CourseDetailComponent({ title = 'Curso de Ejemplo', imag
 								rotateY,
 								transition: 'all 0.1s ease'
 							}}>
-							<Image src={image} alt={title} layout="fill" objectFit="cover" className="absolute inset-0" />
+							<Image src={image} alt={title} title={title} layout="fill" objectFit="cover" className="absolute inset-0" />
 						</motion.div>
 					</motion.div>
 				</div>

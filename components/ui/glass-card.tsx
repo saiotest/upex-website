@@ -27,7 +27,8 @@ interface CustomImageProps {
 }
 const CustomImage: React.FC<CustomImageProps> = ({ icon, ReactIcon }) => {
 	if (icon) {
-		return <Image src={icon} alt={icon.toString().replaceAll('/', '')} width={32} height={32} className="w-14 h-14 mb-0 mx-auto" />;
+		const iconName = icon.toString().replaceAll('/', '');
+		return <Image src={icon} alt={iconName} title={iconName} width={32} height={32} className="w-14 h-14 mb-0 mx-auto" />;
 	} else if (ReactIcon) {
 		return <ReactIcon className="w-12 h-12 mb-4 mx-auto text-[#00FFFF]" />;
 	}
@@ -64,7 +65,7 @@ export function GlassCard({ glowColor, title, description, icon, reactIcon, butt
 				<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"></div>
 				<div className="relative z-10 flex-grow">
 					<CustomImage icon={icon} ReactIcon={reactIcon} />
-					<h2 className="mt-4 text-2xl font-semibold text-white text-center">{title}</h2>
+					<h3 className="mt-4 text-2xl font-semibold text-white text-center">{title}</h3>
 					<p className="mt-2 text-sm text-blue-200 text-left">
 						{description.split('\\n').map((line, index) => (
 							<React.Fragment key={index}>

@@ -34,12 +34,12 @@ export default function TestimonialWall() {
 									<DialogTrigger asChild>
 										<div className="w-full md:w-[calc(50%-1rem)] max-w-[600px] cursor-pointer">
 											<div className="relative w-full aspect-[16/9]">
-												<Image src={testimonial.image} alt="Testimonio de estudiante UPEX" fill className="rounded-lg object-contain" />
+												<Image src={testimonial.image} alt="Testimonio de estudiante UPEX" title="Testimonio" fill className="rounded-lg object-contain" />
 											</div>
 										</div>
 									</DialogTrigger>
 									<DialogContent className="max-w-[95vw] h-[95vh] p-0 border-none">
-										<Image src={testimonial.image} alt="Testimonio ampliado de estudiante UPEX" fill className="object-contain" quality={100} />
+										<Image src={testimonial.image} alt="Testimonio ampliado de estudiante UPEX" title="Testimonio Ampliado" fill className="object-contain" quality={100} />
 										<Button onClick={() => setOpenDialog(null)} className="absolute top-2 right-2 p-2 bg-black bg-opacity-50 rounded-full text-white hover:bg-opacity-75 transition-colors">
 											<X size={50} />
 										</Button>

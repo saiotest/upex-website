@@ -62,7 +62,7 @@ export function Homepage() {
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											<Image src="/slack_icon.svg" alt="Slack" width={32} height={32} className="w-14 h-14 mb-0" />
+											<Image src="/slack_icon.svg" alt="Slack" title="UPEX Community Slack" width={32} height={32} className="w-14 h-14 mb-0" />
 											<span className="text-xs">Slack</span>
 										</div>
 									</TooltipTrigger>
@@ -73,7 +73,7 @@ export function Homepage() {
 								<Tooltip>
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
-											<Image src="/jira_icon.svg" alt="Jira" width={32} height={32} className="w-14 h-14 mb-0" />
+											<Image src="/jira_icon.svg" alt="Jira" title="UPEX Jira" width={32} height={32} className="w-14 h-14 mb-0" />
 											<span className="text-xs">Jira</span>
 										</div>
 									</TooltipTrigger>
@@ -85,7 +85,7 @@ export function Homepage() {
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
 											{/* <Database className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
-											<Image src="/sql_icon.svg" alt="sql" width={32} height={32} className="w-14 h-14 mb-0" />
+											<Image src="/sql_icon.svg" alt="sql" title="MySQL" width={32} height={32} className="w-14 h-14 mb-0" />
 											<span className="text-xs">MySQL</span>
 										</div>
 									</TooltipTrigger>
@@ -97,7 +97,7 @@ export function Homepage() {
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
 											{/* <Send className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
-											<Image src="/postman_icon.svg" alt="postman" width={32} height={32} className="w-14 h-14 mb-0" />
+											<Image src="/postman_icon.svg" alt="postman" title="Postman" width={32} height={32} className="w-14 h-14 mb-0" />
 											<span className="text-xs">Postman</span>
 										</div>
 									</TooltipTrigger>
@@ -109,7 +109,7 @@ export function Homepage() {
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
 											{/* <FileCode className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
-											<Image src="/vscode_icon.svg" alt="vscode" width={32} height={32} className="w-14 h-14 mb-0" />
+											<Image src="/vscode_icon.svg" alt="vscode" title="Visual Studio Code" width={32} height={32} className="w-14 h-14 mb-0" />
 											<span className="text-xs">VSCode</span>
 										</div>
 									</TooltipTrigger>
@@ -121,7 +121,7 @@ export function Homepage() {
 									<TooltipTrigger>
 										<div className="flex flex-col items-center">
 											{/* <GitBranch className="w-8 h-8 mb-2 text-[#00FFFF]" /> */}
-											<Image src="/github_icon.svg" alt="Github" width={32} height={32} className="w-14 h-14 mb-0" />
+											<Image src="/github_icon.svg" alt="Github" title="GitHub" width={32} height={32} className="w-14 h-14 mb-0" />
 											<span className="text-xs">GitHub</span>
 										</div>
 									</TooltipTrigger>
@@ -218,7 +218,7 @@ export function Homepage() {
 									<li>Participación en sprints y ceremonias ágiles.</li>
 									<li>Feedback personalizado de expertos en QA.</li>
 								</ul>
-								<Image src="/jira_galaxy.png" alt="UPEX Galaxy Dashboard" width={1920} height={1080} className="object-cover w-full h-full" />
+								<Image src="/jira_galaxy.png" alt="UPEX Galaxy Dashboard" title="UPEX Galaxy Jira" width={1920} height={1080} className="object-cover w-full h-full" />
 								<div className="mt-auto flex flex-col items-center justify-center w-full">
 									<Link href="/start" target="_blank" rel="noopener noreferrer" passHref>
 										<Button className="mt-4 bg-gradient-to-r from-[#9d00f8] to-[#ff00ff] hover:from-[#cc00cc] hover:to-[#ff86e1] text-white text-xl py-6 px-10 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg max-w-xs md:max-w-md">
@@ -263,14 +263,14 @@ export function Homepage() {
 								<YoutubeShort videoSource="AuChXkp6jR8" title="Cursos de Testing!" />
 							</div>
 							<div className="md:w-1/4 p-2 max-w-md">
-								<Image src="/cursos-blackhole.png" alt="UPEX Blackhole Info" width={1080} height={1080} className="object-cover w-full h-full rounded-3xl border-4 border-white" />
+								<Image src="/cursos-blackhole.png" alt="UPEX Blackhole Info" title="UPEX Blackhole Cursos" width={1080} height={1080} className="object-cover w-full h-full rounded-3xl border-4 border-white" />
 							</div>
 						</div>
 					</section>
 
 					{/** SECTION: TESTIMONIALS */}
 					<div className="container mx-auto mt-20 flex flex-col items-center justify-center">
-						<h1 className="text-4xl mt-20 mb-10 md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#04f5f9] via-[#cea4ff] to-[#da45ff]">TESTIMONIOS</h1>
+						<h2 className="text-4xl mt-20 mb-10 md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#04f5f9] via-[#cea4ff] to-[#da45ff]">TESTIMONIOS</h2>
 						<div className="container max-w-7xl flex items-center justify-center">
 							<div className="flex flex-col md:flex-row items-center">
 								<div className="md:w-2/6 p-8">

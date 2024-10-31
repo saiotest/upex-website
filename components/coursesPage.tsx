@@ -95,7 +95,7 @@ function CourseCard({ title, image, price }: CourseCardProps) {
 				</div>
 				<div className="absolute inset-0">
 					<Link href={`/cursos/${title}`}>
-						<Image src={image} alt={title} layout="fill" objectFit="contain" className="absolute inset-0" />
+						<Image src={image} alt={title} title={title} layout="fill" objectFit="contain" className="absolute inset-0" />
 					</Link>
 				</div>
 			</motion.div>

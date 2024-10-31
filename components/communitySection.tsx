@@ -19,7 +19,7 @@ type PlanetInfo = {
 const planets: PlanetInfo[] = [
 	{
 		name: 'Slack',
-		icon: <Image src="/icon-slack.png" alt="Slack" width={300} height={300} className="w-12 h-12 mb-0" />,
+		icon: <Image src="/icon-slack.png" alt="icon-slack" title="UPEX Community Slack" width={300} height={300} className="w-12 h-12 mb-0" />,
 		description: 'Fuente de la Comunidad Principal integrado con Jira. Espacio privado para notificaciones, consultas y noticias.',
 		link: 'https://join.slack.com/t/upexqa/shared_invite/zt-2p2lxo03o-DeBuiJNRqlSKAID~XdxE2Q',
 		linkText: 'Unirse a Slack',
@@ -27,7 +27,7 @@ const planets: PlanetInfo[] = [
 	},
 	{
 		name: 'Discord',
-		icon: <Image src="/icon-discord.png" alt="Slack" width={300} height={300} className="w-12 h-12 mb-0" />,
+		icon: <Image src="/icon-discord.png" alt="icon-discord" title="UPEX Community Discord" width={300} height={300} className="w-12 h-12 mb-0" />,
 		description: 'Comunidad Abierta para conversar, eventos en vivo, clases de inglés y más.',
 		link: 'https://discord.gg/aCC6t4Ut9k',
 		linkText: 'Unirse a Discord',
@@ -35,7 +35,7 @@ const planets: PlanetInfo[] = [
 	},
 	{
 		name: 'YouTube',
-		icon: <Image src="/icon-youtube.png" alt="Slack" width={300} height={300} className="w-12 h-12 mb-0" />,
+		icon: <Image src="/icon-youtube.png" alt="icon-youtube" title="UPEX YouTube Channel Saitest" width={300} height={300} className="w-12 h-12 mb-0" />,
 		description: 'Canal oficial "Saitest" con más de 22k seguidores. Fuente principal de contenido para la comunidad UPEX.',
 		link: 'https://www.youtube.com/@Saitest',
 		linkText: 'Ver Canal de YouTube',
@@ -43,7 +43,7 @@ const planets: PlanetInfo[] = [
 	},
 	{
 		name: 'LinkedIn',
-		icon: <Image src="/icon-linkedin.png" alt="Slack" width={300} height={300} className="w-12 h-12 mb-0" />,
+		icon: <Image src="/icon-linkedin.png" alt="icon-linkedin" title="Elyer Maldonado Linkedin" width={300} height={300} className="w-12 h-12 mb-0" />,
 		description: 'Perfiles de Elyer Maldonado y UPEX. Fuente principal de noticias y actualizaciones.',
 		link: 'https://www.linkedin.com/in/elyermad/',
 		linkText: 'Seguir en LinkedIn',
@@ -51,7 +51,7 @@ const planets: PlanetInfo[] = [
 	},
 	{
 		name: 'Instagram',
-		icon: <Image src="/icon-instagram.png" alt="Slack" width={300} height={300} className="w-12 h-12 mb-0" />,
+		icon: <Image src="/icon-instagram.png" alt="icon-instagram" title="UPEX Instagram" width={300} height={300} className="w-12 h-12 mb-0" />,
 		description: 'Cuenta "upex_official" con contenido de valor, noticias, promociones e infografías.',
 		link: 'https://www.instagram.com/upex_official/',
 		linkText: 'Seguir en Instagram',
@@ -59,7 +59,7 @@ const planets: PlanetInfo[] = [
 	},
 	{
 		name: 'WhatsApp',
-		icon: <Image src="/icon-whatsapp.png" alt="Slack" width={300} height={300} className="w-12 h-12 mb-0" />,
+		icon: <Image src="/icon-whatsapp.png" alt="icon-whatsapp" title="UPEX Community Whatsapp" width={300} height={300} className="w-12 h-12 mb-0" />,
 		description: 'Comunidad abierta con múltiples chats por especialidades. Fácil acceso para consultas, noticias de empleo y discusiones sobre testing.',
 		link: 'https://chat.whatsapp.com/H1kpOKazMj0CVLXuZTOnud',
 		linkText: 'Unirse a WhatsApp',
@@ -108,7 +108,7 @@ export default function CommunitySocialMedia() {
 									</DialogHeader>
 									<div className="mt-4">
 										<Button asChild className="w-full bg-purple-600 hover:bg-purple-700 text-white">
-											<a href={planet.link} target="_blank" rel="noopener noreferrer">
+											<a href={planet.link} title={planet.linkText} target="_blank" rel="noopener noreferrer">
 												{planet.linkText}
 											</a>
 										</Button>

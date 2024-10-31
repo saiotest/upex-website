@@ -7,7 +7,7 @@ export default function Quotes() {
 		<div className="z-10 flex flex-col lg:flex-row items-center lg:items-stretch gap-12 lg:gap-16">
 			<div className="flex flex-col items-center">
 				<Avatar className="h-60 w-60 mb-5 border-4 border-[#00ffff] shadow-lg shadow-[#00ffff]/20">
-					<AvatarImage src="/saitest_profile.png" alt="Elyer Maldonado" />
+					<AvatarImage src="/saitest_profile.png" alt="Elyer Maldonado" title="Elyer Maldonado Profile" />
 					<AvatarFallback>EM</AvatarFallback>
 				</Avatar>
 				<div className="text-center">

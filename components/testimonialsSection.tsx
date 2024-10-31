@@ -50,7 +50,7 @@ export default function AnimatedTestimonials() {
 						<div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
 							<div className="flex flex-col items-center">
 								<Avatar className="h-60 w-60 mb-5 border-4 border-[#00ffff] shadow-lg shadow-[#00ffff]/20">
-									<AvatarImage src={nextTestimonial.avatar} alt={nextTestimonial.name} />
+									<AvatarImage src={nextTestimonial.avatar} alt={nextTestimonial.name} title={nextTestimonial.name} />
 									<AvatarFallback>
 										{nextTestimonial.name
 											.split(' ')
@@ -85,7 +85,7 @@ export default function AnimatedTestimonials() {
 						<div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
 							<div className="flex flex-col items-center">
 								<Avatar className="h-60 w-60 mb-5 border-4 border-[#00ffff] shadow-lg shadow-[#00ffff]/20">
-									<AvatarImage src={currentTestimonial.avatar} alt={currentTestimonial.name} />
+									<AvatarImage src={currentTestimonial.avatar} alt={currentTestimonial.name} title={currentTestimonial.name} />
 									<AvatarFallback>
 										{currentTestimonial.name
 											.split(' ')

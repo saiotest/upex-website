@@ -51,6 +51,7 @@ export function ExperiencePageComponent() {
 					<Image
 						src="/cat_hello.jpg"
 						alt="Cat says hello"
+						title="Cat says hello"
 						width={375} // Ajusta el ancho según sea necesario
 						height={225} // Ajusta la altura según sea necesario
 						className="mt-40 rounded-xl mb-1"
