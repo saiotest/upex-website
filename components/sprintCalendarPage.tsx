@@ -136,7 +136,7 @@ export function SprintCalendarPage() {
 
 	useEffect(() => {
 		const startDate = new Date(2024, 3, 1); // April 1, 2024
-		setCalendar(generateCalendar(startDate, 12)); // Generate 12 months starting from April 2024
+		setCalendar(generateCalendar(startDate, 24)); // Generate 12 months starting from April 2024
 	}, []);
 
 	useEffect(() => {
