@@ -202,7 +202,7 @@ export function Homepage() {
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 							<GlassCard reactIcon={RocketIcon} title={serv('cards.sandbox.title')} description={serv('cards.sandbox.description')} buttonText={serv('cards.sandbox.link')} linkTo="https://forms.gle/ke4kadCJWRrDkDTXA" glowColor="from-cyan-300 to-blue-600" />
 							<GlassCard reactIcon={Book} title={serv('cards.blackhole.title')} description={serv('cards.blackhole.description')} buttonText={serv('cards.blackhole.link')} linkTo="/cursos" glowColor="from-cyan-300 to-blue-600" />
-							<GlassCard reactIcon={Castle} title={serv('cards.galaxy.title')} description={serv('cards.galaxy.description')} buttonText={serv('cards.galaxy.link')} linkTo="/experience" glowColor="from-cyan-300 to-blue-600" />
+							<GlassCard reactIcon={Castle} title={serv('cards.galaxy.title')} description={serv('cards.galaxy.description')} buttonText={serv('cards.galaxy.link')} linkTo="/experiencia" glowColor="from-cyan-300 to-blue-600" />
 							<GlassCard reactIcon={Satellite} title={serv('cards.satellite.title')} description={serv('cards.satellite.description')} buttonText={serv('cards.satellite.link')} linkTo="#" glowColor="from-cyan-300 to-blue-600" />
 						</div>
 					</div>
