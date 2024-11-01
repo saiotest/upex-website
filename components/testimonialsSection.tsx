@@ -23,6 +23,12 @@ const testimonials: Testimonial[] = [
 		role: 'Performance Test Manager',
 		avatar: '/testimonios/performance360.jpeg',
 		quote: 'Being part of this testing community is a truly transformative experience. You will find surrounded by professionals who not only shared their knowledge but also provide the chance to practice and work with trending tools that are essential in today’s market. Here, theory comes to life: in every real-world project.'
+	},
+	{
+		name: 'Federico Toledo',
+		role: 'Co-founder and Chief Quality Officer @ Abstracta | Board Member @ CUTI | Quality Engineer',
+		avatar: '/testimonios/federico-toledo.jpeg',
+		quote: 'Me impresiona el nivel de involucramiento y aporte de Elyer a la comunidad de calidad de software. Tuve la oportunidad de participar en su canal y me encontré con gente con mucha curiosidad y ganas de crecer y aprender.'
 	}
 	// Add more testimonials here...
 ];
