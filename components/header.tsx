@@ -120,7 +120,7 @@ export default function Header({ hidden }: { hidden?: boolean }) {
 							<SheetHeader>
 								<SheetTitle className="text-[#00ffff]">Menu</SheetTitle>
 							</SheetHeader>
-							<nav className="flex flex-col space-y-4 mt-8">
+							<nav className="flex flex-col space-y-4 mt-8 text-white">
 								<Link href="/cursos" title="Cursos UPEX Blackhole" className="text-lg hover:text-[#00FFFF]">
 									{header('courses')}
 								</Link>

@@ -18,8 +18,8 @@ const SPRINT_LENGTH = 28; // 4 weeks
 const generateCalendar = (startDate: Date, monthsToGenerate: number): SprintDay[][] => {
 	const calendar: SprintDay[][] = [];
 	let currentDate = startDate;
-	let currentSprintNumber = 40;
-	const sprintStartDate = new Date(2024, 2, 18); // March 18, 2024 (start of S40)
+	let currentSprintNumber = 45;
+	const sprintStartDate = new Date(2024, 8, 2); // September 2, 2024
 
 	for (let i = 0; i < monthsToGenerate; i++) {
 		const monthStart = startOfMonth(currentDate);
@@ -135,8 +135,8 @@ export function SprintCalendarPage() {
 	const containerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		const startDate = new Date(2024, 3, 1); // April 1, 2024
-		setCalendar(generateCalendar(startDate, 24)); // Generate 12 months starting from April 2024
+		const startDate = new Date(2024, 8, 2); // September 2, 2024
+		setCalendar(generateCalendar(startDate, 16)); // Generate 12 months starting from April 2024
 	}, []);
 
 	useEffect(() => {
@@ -171,12 +171,26 @@ export function SprintCalendarPage() {
 
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] text-white flex flex-col">
+			<style>
+				{`
+					.calendar-container::-webkit-scrollbar {
+						display: none; /* Safari and Chrome */
+					}
+				`}
+			</style>
 			<Header />
 			<main className="relative flex-grow">
 				<div className="max-w-6xl mx-auto text-center space-y-6 mt-20 flex flex-col items-center">
 					<h1 className="p-2 text-4xl md:text-5xl lg:text-7xl font-bold mb-1 mt-12 bg-clip-text text-transparent bg-gradient-to-r from-[#eaff00] via-[#01fff2] to-[#ff79eb]">Galaxy Sprint Calendar</h1>
 					<Legend />
-					<div ref={containerRef} className="relative w-full max-w-lg overflow-y-auto" style={{ height: 'calc(100vh - 250px)' }}>
+					<div
+						ref={containerRef}
+						className="calendar-container relative w-full max-w-lg overflow-y-auto"
+						style={{
+							height: 'calc(100vh - 250px)',
+							scrollbarWidth: 'none' /* Firefox */,
+							msOverflowStyle: 'none' /* Internet Explorer 10+ */
+						}}>
 						<div className="space-y-4">
 							{calendar.map((month, index) => (
 								<div
